@@ -39,7 +39,7 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Atur Highlight:</h6>
-                        <a class="collapse-item" href="buttons.html">Lihat</a>
+                        <a class="collapse-item" href="{{route('highlights.index')}}">Lihat</a>
                         <a class="collapse-item" href="cards.html">Buat</a>
                     </div>
                 </div>

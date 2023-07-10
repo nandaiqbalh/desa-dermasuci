@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Backend\HighlightController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,4 +26,6 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('backend.component.index');
     })->name('dashboard');
+
+    Route::resource('highlights', HighlightController::class);
 });
