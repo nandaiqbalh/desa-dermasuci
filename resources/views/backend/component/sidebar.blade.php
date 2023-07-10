@@ -26,7 +26,7 @@
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Interface
+                Profil Desa
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
