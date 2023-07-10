@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Backend\HighlightController;
+use App\Http\Controllers\Backend\ProfilController;
 use App\Http\Controllers\Frontend\BerandaController;
 use Illuminate\Support\Facades\Route;
 
@@ -32,5 +33,6 @@ Route::middleware([
 });
 
 Route::resource('beranda', BerandaController::class);
+Route::resource('profil', ProfilController::class);
 
 Route::get('/', [BerandaController::class, 'index']);

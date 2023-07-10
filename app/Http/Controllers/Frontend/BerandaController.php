@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Highlight;
+use App\Models\Profil;
 use Illuminate\Http\Request;
 
 class BerandaController extends Controller
@@ -14,7 +15,8 @@ class BerandaController extends Controller
     public function index()
     {
         $highlights = Highlight::all();
-        return view('frontend.frontend_master', compact('highlights'));
+        $profil = Profil::latest()->limit(1)->get();
+        return view('frontend.frontend_master', compact('highlights', 'profil'));
     }
 
     /**
