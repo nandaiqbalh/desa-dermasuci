@@ -7,7 +7,7 @@
             <h6 class="m-0 font-weight-bold text-primary">Buat Berita</h6>
         </div>
         <div class="card-body">
-            <form action="{{ route('berita.store') }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('admin_berita.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
                     <label for="judul_berita">Judul Berita</label>

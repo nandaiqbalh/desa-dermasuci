@@ -3,20 +3,18 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
-use App\Models\Highlight;
-use App\Models\Profil;
+use App\Models\Berita;
 use Illuminate\Http\Request;
 
-class BerandaController extends Controller
+class BeritaController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $highlights = Highlight::all();
-        $profil = Profil::latest()->limit(1)->get();
-        return view('frontend.beranda.beranda', compact('highlights', 'profil'));
+        $beritas = Berita::all()->reverse();
+        return view('frontend.berita.berita', compact('beritas'));
     }
 
     /**

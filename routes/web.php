@@ -4,6 +4,7 @@ use App\Http\Controllers\Backend\BeritaController;
 use App\Http\Controllers\Backend\HighlightController;
 use App\Http\Controllers\Backend\ProfilController;
 use App\Http\Controllers\Frontend\BerandaController;
+use App\Http\Controllers\Frontend\BeritaController as FrontendBeritaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,9 +33,11 @@ Route::middleware([
 
     Route::resource('admin/highlights', HighlightController::class);
     Route::resource('admin/profil', ProfilController::class);
-    Route::resource('admin/berita', BeritaController::class);
+    Route::resource('admin/admin_berita', BeritaController::class);
 });
 
 Route::resource('beranda', BerandaController::class);
+Route::resource('berita', FrontendBeritaController::class);
+
 
 Route::get('/', [BerandaController::class, 'index']);

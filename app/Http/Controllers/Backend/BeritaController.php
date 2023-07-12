@@ -50,7 +50,7 @@ class BeritaController extends Controller
         $berita->penulis = $user->name; // Mengisi kolom "penulis" dengan nama pengguna yang sedang login
         $berita->save();
 
-        return redirect()->route('berita.index')->with('success', 'Berita berhasil dibuat!');
+        return redirect()->route('admin_berita.index')->with('success', 'Berita berhasil dibuat!');
     }
 
     /**
@@ -99,7 +99,7 @@ class BeritaController extends Controller
 
         $berita->save();
 
-        return redirect()->route('berita.index')->with('success', 'Berita berhasil diperbarui!');
+        return redirect()->route('admin_berita.index')->with('success', 'Berita berhasil diperbarui!');
     }
 
 
@@ -111,6 +111,6 @@ class BeritaController extends Controller
         $berita = Berita::findOrFail($id);
         $berita->delete();
 
-        return redirect()->route('berita.index')->with('success', 'Berita berhasil dihapus!');
+        return redirect()->route('admin_berita.index')->with('success', 'Berita berhasil dihapus!');
     }
 }

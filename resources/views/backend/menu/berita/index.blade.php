@@ -7,7 +7,7 @@
             <h6 class="m-0 font-weight-bold text-primary">Berita</h6>
         </div>
         <div class="card-body">
-            <a href="{{ route('berita.create') }}" class="btn btn-primary mb-3">Buat Berita</a>
+            <a href="{{ route('admin_berita.create') }}" class="btn btn-primary mb-3">Buat Berita</a>
             @if (session('success'))
                 <div class="alert alert-success" role="alert">
                     {{ session('success') }}
@@ -34,8 +34,8 @@
                                     <img src="{{ asset('images/' . $item->thumbnail) }}" alt="Image" width="100">
                                 </td>
                                 <td>
-                                    <a href="{{ route('berita.edit', $item->id) }}" class="btn btn-primary" title="Edit"><i class="fas fa-edit"></i></a>
-                                    <a href="{{ route('berita.show', $item->id) }}" class="btn btn-info" title="View Detail"><i class="fas fa-eye"></i></a>
+                                    <a href="{{ route('admin_berita.edit', $item->id) }}" class="btn btn-primary" title="Edit"><i class="fas fa-edit"></i></a>
+                                    <a href="{{ route('admin_berita.show', $item->id) }}" class="btn btn-info" title="View Detail"><i class="fas fa-eye"></i></a>
                                     <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal{{ $item->id }}" title="Delete"><i class="fas fa-trash-alt"></i></button>
                                     <!-- Modal -->
                                     <div class="modal fade" id="deleteModal{{ $item->id }}" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel{{ $item->id }}" aria-hidden="true">
@@ -52,7 +52,7 @@
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                    <form action="{{ route('berita.destroy', $item->id) }}" method="POST">
+                                                    <form action="{{ route('admin_berita.destroy', $item->id) }}" method="POST">
                                                         @csrf
                                                         @method('DELETE')
                                                         <button type="submit" class="btn btn-danger">Delete</button>

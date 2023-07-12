@@ -10,7 +10,7 @@
                 <li class="nav-item"><a href="{{url('/')}}" class="nav-link"><span>Beranda</span></a></li>
                 <li class="nav-item"><a href="#" class="nav-link"><span>Pelayanan</span></a></li>
                 <li class="nav-item"><a href="#" class="nav-link"><span>Laporan</span></a></li>
-                <li class="nav-item"><a href="#" class="nav-link"><span>Berita</span></a></li>
+                <li class="nav-item"><a href="{{route('berita.index')}}" class="nav-link"><span>Berita</span></a></li>
                 <li class="nav-item"><a href="#" class="nav-link"><span>Download</span></a></li>
                 <li class="nav-item"><a href="#" class="nav-link"><span>Pengaduan</span></a></li>
 
