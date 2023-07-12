@@ -4,7 +4,7 @@
 <div class="container">
     <div class="card">
         <div class="card-header">
-            <h6 class="m-0 font-weight-bold text-primary">Edit Highlight</h6>
+            <h6 class="m-0 font-weight-bold text-primary">Edit Sorotan</h6>
         </div>
         <div class="card-body">
             <form action="{{ route('highlights.update', $highlight->id) }}" method="POST"

@@ -4,10 +4,10 @@
 <div class="container">
     <div class="card">
         <div class="card-header">
-            <h6 class="m-0 font-weight-bold text-primary">Highlights</h6>
+            <h6 class="m-0 font-weight-bold text-primary">Sorotan</h6>
         </div>
         <div class="card-body">
-            <a href="{{ route('highlights.create') }}" class="btn btn-primary mb-3">Create Highlight</a>
+            <a href="{{ route('highlights.create') }}" class="btn btn-primary mb-3">Buat Sorotan</a>
             @if (session('success'))
                 <div class="alert alert-success" role="alert">
                     {{ session('success') }}
@@ -35,12 +35,31 @@
                                 </td>
                                 <td>
                                     <a href="{{ route('highlights.edit', $highlight->id) }}" class="btn btn-primary">Edit</a>
-                                    <form action="{{ route('highlights.destroy', $highlight->id) }}" method="POST"
-                                        style="display: inline-block;">
-                                        @csrf
-                                        @method('DELETE')
-                                        <button type="submit" class="btn btn-danger">Delete</button>
-                                    </form>
+                                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal{{ $highlight->id }}">Delete</button>
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="deleteModal{{ $highlight->id }}" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel{{ $highlight->id }}" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="deleteModalLabel{{ $highlight->id }}">Delete Confirmation</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    Are you sure you want to delete this highlight?
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                    <form action="{{ route('highlights.destroy', $highlight->id) }}" method="POST">
+                                                        @csrf
+                                                        @method('DELETE')
+                                                        <button type="submit" class="btn btn-danger">Delete</button>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </td>
                             </tr>
                         @endforeach

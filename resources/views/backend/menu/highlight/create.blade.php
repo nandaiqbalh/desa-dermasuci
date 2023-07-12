@@ -4,7 +4,7 @@
 <div class="container">
     <div class="card">
         <div class="card-header">
-            <h6 class="m-0 font-weight-bold text-primary">Create Highlight</h6>
+            <h6 class="m-0 font-weight-bold text-primary">Buat Highlight</h6>
         </div>
         <div class="card-body">
             <form action="{{ route('highlights.store') }}" method="POST" enctype="multipart/form-data">
@@ -18,7 +18,7 @@
                     <input type="text" class="form-control" id="subtitle" name="subtitle" required>
                 </div>
                 <div class="form-group">
-                    <label for="image_file">Image</label>
+                    <label for="image_file">Gambar</label>
                     <input type="file" class="form-control-file" id="image_file" name="image_file" required>
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>

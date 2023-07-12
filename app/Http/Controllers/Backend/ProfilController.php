@@ -103,7 +103,7 @@ class ProfilController extends Controller
 
         $profil->save();
 
-        return redirect()->route('profil.index')->with('success', 'Profil berhasil di-update!.');
+        return redirect()->route('profil.index')->with('success', 'Profil berhasil di-update!');
     }
 
     /**

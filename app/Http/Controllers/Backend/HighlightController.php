@@ -52,7 +52,7 @@ class HighlightController extends Controller
             'image_file' => $imageName,
         ]);
 
-        return redirect()->route('highlights.index')->with('success', 'Highlight created successfully.');
+        return redirect()->route('highlights.index')->with('success', 'Sorotan berhasil dibuat.');
     }
 
     /**
@@ -105,7 +105,7 @@ class HighlightController extends Controller
 
         $highlight->save();
 
-        return redirect()->route('highlights.index')->with('success', 'Highlight updated successfully.');
+        return redirect()->route('highlights.index')->with('success', 'Sorotan berhasil diupdate.');
     }
 
     /**
@@ -118,6 +118,6 @@ class HighlightController extends Controller
     {
         $highlight->delete();
 
-        return redirect()->route('highlights.index')->with('success', 'Highlight deleted successfully.');
+        return redirect()->route('highlights.index')->with('success', 'Sorotan berhasil dihapus.');
     }
 }
