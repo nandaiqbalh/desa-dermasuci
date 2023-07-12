@@ -68,7 +68,7 @@
                             <div class="col-md-12 heading-section ftco-animate">
                                 <span class="subheading">Profil Desa</span>
                                 <h2 class="mb-4" style="font-size: 34px; text-transform: capitalize;">{{$item->title}}</h2>
-                                <p>{{$item->subtitle}}.</p>
+                                <p>{!! nl2br($item->subtitle) !!}</p>
                             </div>
                         </div>
                     </div>

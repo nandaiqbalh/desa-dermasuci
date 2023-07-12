@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Backend\BeritaController;
 use App\Http\Controllers\Backend\HighlightController;
 use App\Http\Controllers\Backend\ProfilController;
 use App\Http\Controllers\Frontend\BerandaController;
@@ -29,10 +30,11 @@ Route::middleware([
         return view('backend.component.index');
     })->name('dashboard');
 
-    Route::resource('highlights', HighlightController::class);
+    Route::resource('admin/highlights', HighlightController::class);
+    Route::resource('admin/profil', ProfilController::class);
+    Route::resource('admin/berita', BeritaController::class);
 });
 
 Route::resource('beranda', BerandaController::class);
-Route::resource('profil', ProfilController::class);
 
 Route::get('/', [BerandaController::class, 'index']);

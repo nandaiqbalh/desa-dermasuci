@@ -8,9 +8,12 @@
         <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav nav ml-auto">
                 <li class="nav-item"><a href="{{url('/')}}" class="nav-link"><span>Beranda</span></a></li>
-                <li class="nav-item"><a href="#about-section" class="nav-link"><span>Pelayanan</span></a></li>
-                <li class="nav-item"><a href="#blog-section" class="nav-link"><span>Berita</span></a></li>
-                <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Berita</span></a></li>
+                <li class="nav-item"><a href="#" class="nav-link"><span>Pelayanan</span></a></li>
+                <li class="nav-item"><a href="#" class="nav-link"><span>Laporan</span></a></li>
+                <li class="nav-item"><a href="#" class="nav-link"><span>Berita</span></a></li>
+                <li class="nav-item"><a href="#" class="nav-link"><span>Download</span></a></li>
+                <li class="nav-item"><a href="#" class="nav-link"><span>Pengaduan</span></a></li>
+
             </ul>
         </div>
     </div>

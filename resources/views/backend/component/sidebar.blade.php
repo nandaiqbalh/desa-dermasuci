@@ -42,6 +42,18 @@
                     <span>Profil Desa</span></a>
             </li>
 
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Berita dan Pengumuman
+            </div>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link" href="{{route('berita.index')}}">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Berita</span></a>
+            </li>
+
         </ul>
         <!-- End of Sidebar -->
 
