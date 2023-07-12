@@ -32,6 +32,7 @@ class BeritaController extends Controller
     {
         $request->validate([
             'judul_berita' => 'required',
+            'subjudul_berita' => 'required',
             'isi_berita' => 'required',
             'thumbnail' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
@@ -43,6 +44,7 @@ class BeritaController extends Controller
 
         $berita = new Berita([
             'judul_berita' => $request->judul_berita,
+            'subjudul_berita' => $request->subjudul_berita,
             'isi_berita' => $request->isi_berita,
             'thumbnail' => $imageName,
         ]);
@@ -78,6 +80,7 @@ class BeritaController extends Controller
     {
         $request->validate([
             'judul_berita' => 'required',
+            'subjudul_berita' => 'required',
             'isi_berita' => 'required',
             'thumbnail' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
@@ -85,6 +88,7 @@ class BeritaController extends Controller
         $berita = Berita::findOrFail($id);
 
         $berita->judul_berita = $request->judul_berita;
+        $berita->subjudul_berita = $request->subjudul_berita;
         $berita->isi_berita = $request->isi_berita;
 
         if ($request->hasFile('thumbnail')) {

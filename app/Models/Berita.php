@@ -9,6 +9,7 @@ class Berita extends Model
 {
     protected $fillable = [
         'judul_berita',
+        'subjudul_berita',
         'isi_berita',
         'penulis',
         'thumbnail',

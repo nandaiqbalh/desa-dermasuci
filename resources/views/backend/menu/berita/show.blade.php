@@ -13,12 +13,13 @@
                         <img src="{{ asset('images/' . $berita->thumbnail) }}" alt="Thumbnail" class="img-fluid" style="max-width: 300px; max-height: 200px">
                     </div>
                     <div class="mb-3">
-                        <h5 class="font-weight-bold">Judul: {{ $berita->judul_berita }}</h5>
-                        <p class="font-weight-bold">Penulis: {{ $berita->penulis }}</p>
+                        <p class="font-weight-bold">{{ $berita->judul_berita }}</p>
+                        <p class="font-weight-bold">{{ $berita->subjudul_berita }}</p>
                     </div>
                 </div>
                 <div class="col-md-8">
                     <div>
+                        <p class="font-weight-bold">Penulis: {{ $berita->penulis }}</p>
                         <h6 class="font-weight-bold">Isi Berita:</h6>
                         <p>{{ $berita->isi_berita }}</p>
                     </div>

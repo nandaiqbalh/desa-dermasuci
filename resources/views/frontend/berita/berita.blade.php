@@ -20,7 +20,7 @@
                             </p>
                         </div>
                         <h3 class="heading"><a href="single.html">{{ $berita->judul_berita }}</a></h3>
-                        <p>{{ $berita->isi_berita }}</p>
+                        <p>{{ $berita->subjudul_berita }}</p>
                     </div>
                 </div>
             </div>

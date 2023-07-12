@@ -19,7 +19,7 @@
                         <tr>
                             <th style="width: 5%;">No.</th>
                             <th style="width: 30%;">Judul</th>
-                            <th style="width: 20%;">Penulis</th>
+                            <th style="width: 20%;">Sub Judul</th>
                             <th style="width: 25%;">Thumbnail</th>
                             <th style="width: 20%;">Actions</th>
                         </tr>
@@ -29,7 +29,7 @@
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $item->judul_berita }}</td>
-                                <td>{{ $item->penulis }}</td>
+                                <td>{{ $item->subjudul_berita }}</td>
                                 <td>
                                     <img src="{{ asset('images/' . $item->thumbnail) }}" alt="Image" width="100">
                                 </td>

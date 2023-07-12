@@ -14,6 +14,10 @@
                     <input type="text" class="form-control" id="judul_berita" name="judul_berita" required>
                 </div>
                 <div class="form-group">
+                    <label for="subjudul_berita">Sub Judul Berita</label>
+                    <input type="text" class="form-control" id="subjudul_berita" name="subjudul_berita" required>
+                </div>
+                <div class="form-group">
                     <label for="isi_berita">Isi Berita</label>
                     <textarea class="form-control" id="isi_berita" name="isi_berita" rows="3" required></textarea>
                 </div>
