@@ -39,5 +39,4 @@ Route::middleware([
 Route::resource('beranda', BerandaController::class);
 Route::resource('berita', FrontendBeritaController::class);
 
-
 Route::get('/', [BerandaController::class, 'index']);

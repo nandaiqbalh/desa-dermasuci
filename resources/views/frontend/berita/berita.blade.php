@@ -10,7 +10,7 @@
 
             <div class="col-md-4 d-flex ftco-animate">
                 <div class="blog-entry justify-content-end">
-                    <a href="single.html" class="block-20" style="background-image: url('{{ asset('images/' . $berita->thumbnail) }}');">
+                    <a href="{{ route('berita.show', $berita->id) }}" class="block-20" style="background-image: url('{{ asset('images/' . $berita->thumbnail) }}');">
                     </a>
                     <div class="text mt-3 float-right d-block">
                         <div class="d-flex align-items-center mb-3 meta">
