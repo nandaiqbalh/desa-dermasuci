@@ -44,6 +44,10 @@
 
             <!-- Heading -->
             <div class="sidebar-heading">
+                Pelayanan
+            </div>
+            <!-- Heading -->
+            <div class="sidebar-heading">
                 Berita dan Pengumuman
             </div>
 

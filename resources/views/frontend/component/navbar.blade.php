@@ -8,7 +8,7 @@
         <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav nav ml-auto">
                 <li class="nav-item"><a href="{{url('/')}}" class="nav-link"><span>Beranda</span></a></li>
-                <li class="nav-item"><a href="#" class="nav-link"><span>Pelayanan</span></a></li>
+                <li class="nav-item"><a href="{{route('pelayanan.index')}}" class="nav-link"><span>Pelayanan</span></a></li>
                 <li class="nav-item"><a href="#" class="nav-link"><span>Laporan</span></a></li>
                 <li class="nav-item"><a href="{{route('berita.index')}}" class="nav-link"><span>Berita</span></a></li>
                 <li class="nav-item"><a href="#" class="nav-link"><span>Download</span></a></li>

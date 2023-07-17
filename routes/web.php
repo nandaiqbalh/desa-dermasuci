@@ -5,6 +5,8 @@ use App\Http\Controllers\Backend\HighlightController;
 use App\Http\Controllers\Backend\ProfilController;
 use App\Http\Controllers\Frontend\BerandaController;
 use App\Http\Controllers\Frontend\BeritaController as FrontendBeritaController;
+use App\Http\Controllers\Frontend\PelayananController;
+use App\Http\Controllers\PembuatanKTPController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -37,6 +39,10 @@ Route::middleware([
 });
 
 Route::resource('beranda', BerandaController::class);
+Route::resource('pelayanan', PelayananController::class);
 Route::resource('berita', FrontendBeritaController::class);
+
+// pelayanan
+Route::resource('pembuatan-ktp', PembuatanKTPController::class);
 
 Route::get('/', [BerandaController::class, 'index']);
