@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('pekerjaan')->nullable();
             $table->string('alamat')->nullable();
             $table->string('agama')->nullable();
+            $table->integer('status')->default(0);
             $table->longText('catatan')->nullable();
             $table->timestamps();
         });

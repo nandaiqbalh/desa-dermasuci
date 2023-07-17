@@ -34,6 +34,42 @@ class BPembuatanKTPController extends Controller
         return $pdf->stream($filename);
     }
 
+    public function dalamReviewAction($id)
+    {
+        // Find the PembuatanKTP record by its ID
+        $pembuatanKTP = PembuatanKTP::find($id);
+
+        if (!$pembuatanKTP) {
+            // Handle the case when the record is not found
+            return redirect()->back()->with('error', 'Pengajuan not found.');
+        }
+
+        // Update the status to indicate it's in review
+        $pembuatanKTP->status = 1; // Replace 1 with the appropriate status value
+        $pembuatanKTP->save();
+
+        // Redirect the user back to the previous page with a success message
+        return redirect()->back()->with('success', 'Pengajuan sedang dalam review.');
+    }
+
+    public function selesaiAction($id)
+    {
+        // Find the PembuatanKTP record by its ID
+        $pembuatanKTP = PembuatanKTP::find($id);
+
+        if (!$pembuatanKTP) {
+            // Handle the case when the record is not found
+            return redirect()->back()->with('error', 'Pengajuan not found.');
+        }
+
+        // Update the status to indicate it's completed
+        $pembuatanKTP->status = 0; // Replace 2 with the appropriate status value
+        $pembuatanKTP->save();
+
+        // Redirect the user back to the previous page with a success message
+        return redirect()->back()->with('success', 'Pengajuan ditandai sudah selesai.');
+    }
+
 
     /**
      * Show the form for creating a new resource.

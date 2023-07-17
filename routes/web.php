@@ -40,6 +40,9 @@ Route::middleware([
     Route::resource('admin/admin_pembuatan-ktp', BPembuatanKTPController::class);
     Route::get('/user', [UserController::class, 'index']);
     Route::get('/admin_pembuatan-ktp/print/{id}', [BPembuatanKTPController::class, 'print'])->name('admin_pembuatan-ktp.print');
+
+    Route::get('/dalam-review/{id}', [BPembuatanKTPController::class, 'dalamReviewAction'])->name('dalam-review');
+    Route::get('/selesai/{id}', [BPembuatanKTPController::class, 'selesaiAction'])->name('selesai');
 });
 
 Route::resource('beranda', BerandaController::class);
