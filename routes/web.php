@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Backend\BeritaController;
+use App\Http\Controllers\Backend\BPembuatanKTPController;
 use App\Http\Controllers\Backend\HighlightController;
 use App\Http\Controllers\Backend\ProfilController;
 use App\Http\Controllers\Frontend\BerandaController;
@@ -36,6 +37,9 @@ Route::middleware([
     Route::resource('admin/highlights', HighlightController::class);
     Route::resource('admin/profil', ProfilController::class);
     Route::resource('admin/admin_berita', BeritaController::class);
+    Route::resource('admin/admin_pembuatan-ktp', BPembuatanKTPController::class);
+    Route::get('/user', [UserController::class, 'index']);
+    Route::get('/admin_pembuatan-ktp/print/{id}', [BPembuatanKTPController::class, 'print'])->name('admin_pembuatan-ktp.print');
 });
 
 Route::resource('beranda', BerandaController::class);
