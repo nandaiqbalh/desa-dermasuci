@@ -72,14 +72,13 @@
                 </a>
             </div>
             <div class="col-md-6 col-lg-3">
-                <div class="media block-6 services d-block bg-white rounded-lg shadow ftco-animate">
-                    <div class="icon shadow d-flex align-items-center justify-content-center"><span
-                            class="flaticon-vector"></span></div>
+                <a href="{{ route('permohonan-sktm.index') }}" class="media block-6 services d-block bg-white rounded-lg shadow ftco-animate">
+                    <div class="icon shadow d-flex align-items-center justify-content-center"><span class="flaticon-app-development"></span></div>
                     <div class="media-body">
-                        <h3 class="heading mb-3">Pembuatan SKTM</h3>
-                        <p>A small river named Duden flows by their place and supplies.</p>
+                        <h3 class="heading mb-3">Permohonan SKTM</h3>
+                        <p>Buat Pengantar Surat Keterangan Tidak Mampu.</p>
                     </div>
-                </div>
+                </a>
             </div>
 
             <div class="col-md-6 col-lg-3">

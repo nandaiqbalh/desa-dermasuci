@@ -62,6 +62,7 @@
                         <a class="collapse-item" href="{{route('admin_keterangan-domisili.index')}}">Keterangan Domisili</a>
                         <a class="collapse-item" href="{{route('admin_pindah-domisili.index')}}">Pindah Domisili</a>
                         <a class="collapse-item" href="{{route('admin_permohonan-skck.index')}}">Permohonan SKCK</a>
+                        <a class="collapse-item" href="{{route('admin_permohonan-sktm.index')}}">Permohonan SKTM</a>
 
                     </div>
                 </div>
