@@ -53,11 +53,11 @@
 
         <div class="row">
             <div class="col-md-6 col-lg-3">
-                <a href="{{ route('keterangan-domisili.index') }}" class="media block-6 services d-block bg-white rounded-lg shadow ftco-animate">
+                <a href="{{ route('pindah-domisili.index') }}" class="media block-6 services d-block bg-white rounded-lg shadow ftco-animate">
                     <div class="icon shadow d-flex align-items-center justify-content-center"><span class="flaticon-app-development"></span></div>
                     <div class="media-body">
-                        <h3 class="heading mb-3">Surat Pindah Masuk</h3>
-                        <p>Buat surat keterangan pindah masuk Desa Dermasuci.</p>
+                        <h3 class="heading mb-3">Surat Pindah Domisili</h3>
+                        <p>Buat surat keterangan pindah domisili Desa Dermasuci.</p>
                     </div>
                 </a>
             </div>

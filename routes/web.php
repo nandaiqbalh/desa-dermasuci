@@ -5,6 +5,7 @@ use App\Http\Controllers\Backend\BPembuatanKTPController;
 use App\Http\Controllers\Backend\HighlightController;
 use App\Http\Controllers\Backend\Pelayanan\BEKeteranganDomisiliController;
 use App\Http\Controllers\Backend\Pelayanan\BEPermohonanKKController;
+use App\Http\Controllers\Backend\Pelayanan\BEPindahDomisiliController;
 use App\Http\Controllers\Backend\Pelayanan\PerubahanKTPController as PelayananPerubahanKTPController;
 use App\Http\Controllers\Backend\ProfilController;
 use App\Http\Controllers\Frontend\BerandaController;
@@ -13,6 +14,7 @@ use App\Http\Controllers\Frontend\PelayananController;
 use App\Http\Controllers\Pelayanan\KeteranganDomisiliController;
 use App\Http\Controllers\Pelayanan\PermohonanKKController;
 use App\Http\Controllers\Pelayanan\PerubahanKTPController;
+use App\Http\Controllers\Pelayanan\PindahDomisiliController;
 use App\Http\Controllers\PembuatanKTPController;
 use Illuminate\Support\Facades\Route;
 
@@ -72,6 +74,13 @@ Route::middleware([
 
     Route::get('/dalam-review/{id}', [BEKeteranganDomisiliController::class, 'dalamReviewAction'])->name('dalam-review');
     Route::get('/selesai/{id}', [BEKeteranganDomisiliController::class, 'selesaiAction'])->name('selesai');
+
+    // Pindah Domisili
+    Route::resource('admin/admin_pindah-domisili', BEPindahDomisiliController::class);
+    Route::get('/admin_pindah-domisili/print/{id}', [BEPindahDomisiliController::class, 'print'])->name('admin_pindah-domisili.print');
+
+    Route::get('/dalam-review/{id}', [BEPindahDomisiliController::class, 'dalamReviewAction'])->name('dalam-review');
+    Route::get('/selesai/{id}', [BEPindahDomisiliController::class, 'selesaiAction'])->name('selesai');
 });
 
 Route::resource('beranda', BerandaController::class);
@@ -83,6 +92,8 @@ Route::resource('pembuatan-ktp', PembuatanKTPController::class);
 Route::resource('perubahan-ktp', PerubahanKTPController::class);
 Route::resource('permohonan-kk', PermohonanKKController::class);
 Route::resource('keterangan-domisili', KeteranganDomisiliController::class);
+Route::resource('pindah-domisili', PindahDomisiliController::class);
+
 
 
 
