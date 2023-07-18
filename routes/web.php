@@ -57,58 +57,58 @@ Route::middleware([
     Route::resource('admin/admin_pembuatan-ktp', BPembuatanKTPController::class);
     Route::get('/admin_pembuatan-ktp/print/{id}', [BPembuatanKTPController::class, 'print'])->name('admin_pembuatan-ktp.print');
 
-    Route::get('/dalam-review/{id}', [BPembuatanKTPController::class, 'dalamReviewAction'])->name('dalam-review');
-    Route::get('/selesai/{id}', [BPembuatanKTPController::class, 'selesaiAction'])->name('selesai');
+    Route::get('/pembuatan-ktp/dalam-review/{id}', [BPembuatanKTPController::class, 'dalamReviewAction'])->name('pembuatan-ktp-dalam-review');
+    Route::get('/pembuatan-ktp/selesai/{id}', [BPembuatanKTPController::class, 'selesaiAction'])->name('pembuatan-ktp-selesai');
 
 
     // perubahan KTP
     Route::resource('admin/admin_perubahan-ktp', PelayananPerubahanKTPController::class);
     Route::get('/admin_perubahan-ktp/print/{id}', [PelayananPerubahanKTPController::class, 'print'])->name('admin_perubahan-ktp.print');
 
-    Route::get('/dalam-review/{id}', [PelayananPerubahanKTPController::class, 'dalamReviewAction'])->name('dalam-review');
-    Route::get('/selesai/{id}', [PelayananPerubahanKTPController::class, 'selesaiAction'])->name('selesai');
+    Route::get('/perubahan-ktp/dalam-review/{id}', [PelayananPerubahanKTPController::class, 'dalamReviewAction'])->name('perubahan-ktp-dalam-review');
+    Route::get('/perubahan-ktp/selesai/{id}', [PelayananPerubahanKTPController::class, 'selesaiAction'])->name('perubahan-ktp-selesai');
 
     // permohonan KK
     Route::resource('admin/admin_permohonan-kk', BEPermohonanKKController::class);
     Route::get('/admin_permohonan-kk/print/{id}', [BEPermohonanKKController::class, 'print'])->name('admin_permohonan-kk.print');
 
-    Route::get('/dalam-review/{id}', [BEPermohonanKKController::class, 'dalamReviewAction'])->name('dalam-review');
-    Route::get('/selesai/{id}', [BEPermohonanKKController::class, 'selesaiAction'])->name('selesai');
+    Route::get('/permohonan-kk-dalam-review/{id}', [BEPermohonanKKController::class, 'dalamReviewAction'])->name('permohonan-kk-dalam-review');
+    Route::get('/permohonan-kk-selesai/{id}', [BEPermohonanKKController::class, 'selesaiAction'])->name('permohonan-kk-selesai');
 
     // Keterangan Domisili
     Route::resource('admin/admin_keterangan-domisili', BEKeteranganDomisiliController::class);
     Route::get('/admin_keterangan-domisili/print/{id}', [BEKeteranganDomisiliController::class, 'print'])->name('admin_keterangan-domisili.print');
 
-    Route::get('/dalam-review/{id}', [BEKeteranganDomisiliController::class, 'dalamReviewAction'])->name('dalam-review');
-    Route::get('/selesai/{id}', [BEKeteranganDomisiliController::class, 'selesaiAction'])->name('selesai');
+    Route::get('/keterangan-domisili-dalam-review/{id}', [BEKeteranganDomisiliController::class, 'dalamReviewAction'])->name('keterangan-domisili-dalam-review');
+    Route::get('/keterangan-domisili-selesai/{id}', [BEKeteranganDomisiliController::class, 'selesaiAction'])->name('keterangan-domisili-selesai');
 
     // Pindah Domisili
     Route::resource('admin/admin_pindah-domisili', BEPindahDomisiliController::class);
     Route::get('/admin_pindah-domisili/print/{id}', [BEPindahDomisiliController::class, 'print'])->name('admin_pindah-domisili.print');
 
-    Route::get('/dalam-review/{id}', [BEPindahDomisiliController::class, 'dalamReviewAction'])->name('dalam-review');
-    Route::get('/selesai/{id}', [BEPindahDomisiliController::class, 'selesaiAction'])->name('selesai');
+    Route::get('/pindah-domisili-dalam-review/{id}', [BEPindahDomisiliController::class, 'dalamReviewAction'])->name('pindah-domisili-dalam-review');
+    Route::get('/pindah-domisili-selesai/{id}', [BEPindahDomisiliController::class, 'selesaiAction'])->name('pindah-domisili-selesai');
 
     // Permohonan SKCK
     Route::resource('admin/admin_permohonan-skck', BEPermohonanSKCKController::class);
     Route::get('/admin_permohonan-skck/print/{id}', [BEPermohonanSKCKController::class, 'print'])->name('admin_permohonan-skck.print');
 
-    Route::get('/dalam-review/{id}', [BEPermohonanSKCKController::class, 'dalamReviewAction'])->name('dalam-review');
-    Route::get('/selesai/{id}', [BEPermohonanSKCKController::class, 'selesaiAction'])->name('selesai');
+    Route::get('/permohonan-skck-dalam-review/{id}', [BEPermohonanSKCKController::class, 'dalamReviewAction'])->name('permohonan-skck-dalam-review');
+    Route::get('/permohonan-skck-selesai/{id}', [BEPermohonanSKCKController::class, 'selesaiAction'])->name('permohonan-skck-selesai');
 
     // Permohonan SKTM
     Route::resource('admin/admin_permohonan-sktm', BEPermohonanSKTMController::class);
     Route::get('/admin_permohonan-sktm/print/{id}', [BEPermohonanSKTMController::class, 'print'])->name('admin_permohonan-sktm.print');
 
-    Route::get('/dalam-review/{id}', [BEPermohonanSKTMController::class, 'dalamReviewAction'])->name('dalam-review');
-    Route::get('/selesai/{id}', [BEPermohonanSKTMController::class, 'selesaiAction'])->name('selesai');
+    Route::get('/permohonan-sktm-dalam-review/{id}', [BEPermohonanSKTMController::class, 'dalamReviewAction'])->name('permohonan-sktm-dalam-review');
+    Route::get('/permohonan-sktm-selesai/{id}', [BEPermohonanSKTMController::class, 'selesaiAction'])->name('permohonan-sktm-selesai');
 
     // Permohonan SKTM
     Route::resource('admin/admin_keterangan-usaha', BEKeteranganUsahaController::class);
     Route::get('/admin_keterangan-usaha/print/{id}', [BEKeteranganUsahaController::class, 'print'])->name('admin_keterangan-usaha.print');
 
-    Route::get('/dalam-review/{id}', [BEKeteranganUsahaController::class, 'dalamReviewAction'])->name('dalam-review');
-    Route::get('/selesai/{id}', [BEKeteranganUsahaController::class, 'selesaiAction'])->name('selesai');
+    Route::get('/keterangan-usaha-dalam-review/{id}', [BEKeteranganUsahaController::class, 'dalamReviewAction'])->name('keterangan-usaha-dalam-review');
+    Route::get('/keterangan-usaha-selesai/{id}', [BEKeteranganUsahaController::class, 'selesaiAction'])->name('keterangan-usaha-selesai');
 });
 
 Route::resource('beranda', BerandaController::class);

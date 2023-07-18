@@ -33,9 +33,9 @@
                                 <td>{{ $pembuatanKTP->nik }}</td>
                                 <td>
                                         @if ($pembuatanKTP->status == 0)
-                                            <a href="{{ route('dalam-review', $pembuatanKTP->id) }}" class="btn btn-warning">Dalam Review</a>
+                                            <a href="{{ route('pembuatan-ktp-dalam-review', $pembuatanKTP->id) }}" class="btn btn-warning">Dalam Review</a>
                                         @elseif ($pembuatanKTP->status == 1)
-                                            <a href="{{ route('selesai', $pembuatanKTP->id) }}" class="btn btn-success">Selesai</a>
+                                            <a href="{{ route('pembuatan-ktp-selesai', $pembuatanKTP->id) }}" class="btn btn-success">Selesai</a>
                                         @endif
                                 </td>
 

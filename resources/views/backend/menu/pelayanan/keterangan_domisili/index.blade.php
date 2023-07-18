@@ -33,9 +33,9 @@
                                 <td>{{ $item->nik }}</td>
                                 <td>
                                         @if ($item->status == 0)
-                                            <a href="{{ route('dalam-review', $item->id) }}" class="btn btn-warning">Dalam Review</a>
+                                            <a href="{{ route('keterangan-domisili-dalam-review', $item->id) }}" class="btn btn-warning">Dalam Review</a>
                                         @elseif ($item->status == 1)
-                                            <a href="{{ route('selesai', $item->id) }}" class="btn btn-success">Selesai</a>
+                                            <a href="{{ route('keterangan-domisili-selesai', $item->id) }}" class="btn btn-success">Selesai</a>
                                         @endif
                                 </td>
 
