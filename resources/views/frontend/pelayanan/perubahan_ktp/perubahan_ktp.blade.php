@@ -11,19 +11,20 @@
         <div class="row">
             <div class="col-lg-12 ftco-animate">
                 <div class="comment-form-wrap pt-5">
-                    <h3 class="mb-5">Surat Pengantar Pembuatan KTP</h3>
-                    <p>Prosedur pembuatan Surat Pengantar Pembuatan KTP:</p>
+                    <h3 class="mb-5">Surat Pengantar Perubahan KTP</h3>
+                    <p>Prosedur pembuatan Surat Pengantar Perubahan KTP:</p>
                     <ol>
                         <li>Mengisi formulir</li>
                         <li>Menunggu konfirmasi dari kantor desa melalui WhatsApp</li>
                         <li>Datang ke kantor untuk mengambil surat dengan membawa persyaratan yang diperlukan:</li>
                         <ul>
-                            <li>Fotokopi Kartu Keluarga (C-1)</li>
-                            <li>Fotokopi Akta Kelahiran</li>
+                            <li>KTP asli</li>
+                            <li>Bukti pendukungnya (misalnya: ijazah, surat nikah, dll)</li>
+                            <li>Untuk perubahan status maka wajib merubah Kartu Keluarga (C1) terlebih dahulu</li>
                         </ul>
                     </ol>
 
-                    <form action="{{ route('pembuatan-ktp.store') }}" method="POST" class="p-5 bg-light">
+                    <form action="{{ route('perubahan-ktp.store') }}" method="POST" class="p-5 bg-light">
                         @csrf
                         <div class="form-group">
                             <label for="nama">Nama *</label>
