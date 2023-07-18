@@ -59,6 +59,8 @@
                         <a class="collapse-item" href="{{route('admin_pembuatan-ktp.index')}}">Pembuatan KTP</a>
                         <a class="collapse-item" href="{{route('admin_perubahan-ktp.index')}}">Perubahan KTP</a>
                         <a class="collapse-item" href="{{route('admin_permohonan-kk.index')}}">Permohonan KK</a>
+                        <a class="collapse-item" href="{{route('admin_keterangan-domisili.index')}}">Keterangan Domisili</a>
+
                         <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
                         <div class="collapse-divider"></div>
                         <h6 class="collapse-header">Other Pages:</h6>
