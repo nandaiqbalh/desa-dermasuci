@@ -61,12 +61,8 @@
                         <a class="collapse-item" href="{{route('admin_permohonan-kk.index')}}">Permohonan KK</a>
                         <a class="collapse-item" href="{{route('admin_keterangan-domisili.index')}}">Keterangan Domisili</a>
                         <a class="collapse-item" href="{{route('admin_pindah-domisili.index')}}">Pindah Domisili</a>
+                        <a class="collapse-item" href="{{route('admin_permohonan-skck.index')}}">Permohonan SKCK</a>
 
-                        <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
-                        <div class="collapse-divider"></div>
-                        <h6 class="collapse-header">Other Pages:</h6>
-                        <a class="collapse-item" href="404.html">404 Page</a>
-                        <a class="collapse-item" href="blank.html">Blank Page</a>
                     </div>
                 </div>
             </li>

@@ -5,6 +5,7 @@ use App\Http\Controllers\Backend\BPembuatanKTPController;
 use App\Http\Controllers\Backend\HighlightController;
 use App\Http\Controllers\Backend\Pelayanan\BEKeteranganDomisiliController;
 use App\Http\Controllers\Backend\Pelayanan\BEPermohonanKKController;
+use App\Http\Controllers\Backend\Pelayanan\BEPermohonanSKCKController;
 use App\Http\Controllers\Backend\Pelayanan\BEPindahDomisiliController;
 use App\Http\Controllers\Backend\Pelayanan\PerubahanKTPController as PelayananPerubahanKTPController;
 use App\Http\Controllers\Backend\ProfilController;
@@ -13,6 +14,7 @@ use App\Http\Controllers\Frontend\BeritaController as FrontendBeritaController;
 use App\Http\Controllers\Frontend\PelayananController;
 use App\Http\Controllers\Pelayanan\KeteranganDomisiliController;
 use App\Http\Controllers\Pelayanan\PermohonanKKController;
+use App\Http\Controllers\Pelayanan\PermohonanSKCKController;
 use App\Http\Controllers\Pelayanan\PerubahanKTPController;
 use App\Http\Controllers\Pelayanan\PindahDomisiliController;
 use App\Http\Controllers\PembuatanKTPController;
@@ -81,6 +83,13 @@ Route::middleware([
 
     Route::get('/dalam-review/{id}', [BEPindahDomisiliController::class, 'dalamReviewAction'])->name('dalam-review');
     Route::get('/selesai/{id}', [BEPindahDomisiliController::class, 'selesaiAction'])->name('selesai');
+
+    // Permohonan SKCK
+    Route::resource('admin/admin_permohonan-skck', BEPermohonanSKCKController::class);
+    Route::get('/admin_permohonan-skck/print/{id}', [BEPermohonanSKCKController::class, 'print'])->name('admin_permohonan-skck.print');
+
+    Route::get('/dalam-review/{id}', [BEPermohonanSKCKController::class, 'dalamReviewAction'])->name('dalam-review');
+    Route::get('/selesai/{id}', [BEPermohonanSKCKController::class, 'selesaiAction'])->name('selesai');
 });
 
 Route::resource('beranda', BerandaController::class);
@@ -93,6 +102,8 @@ Route::resource('perubahan-ktp', PerubahanKTPController::class);
 Route::resource('permohonan-kk', PermohonanKKController::class);
 Route::resource('keterangan-domisili', KeteranganDomisiliController::class);
 Route::resource('pindah-domisili', PindahDomisiliController::class);
+Route::resource('permohonan-skck', PermohonanSKCKController::class);
+
 
 
 

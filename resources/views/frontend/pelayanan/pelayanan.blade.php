@@ -61,25 +61,15 @@
                     </div>
                 </a>
             </div>
+
             <div class="col-md-6 col-lg-3">
-                <div class="media block-6 services d-block bg-white rounded-lg shadow ftco-animate">
-                    <div class="icon shadow d-flex align-items-center justify-content-center"><span
-                            class="flaticon-computer"></span></div>
+                <a href="{{ route('permohonan-skck.index') }}" class="media block-6 services d-block bg-white rounded-lg shadow ftco-animate">
+                    <div class="icon shadow d-flex align-items-center justify-content-center"><span class="flaticon-app-development"></span></div>
                     <div class="media-body">
-                        <h3 class="heading mb-3">Pindah Keluar</h3>
-                        <p>A small river named Duden flows by their place and supplies.</p>
+                        <h3 class="heading mb-3">Permohonan SKCK</h3>
+                        <p>Buat Pengantar Surat Keterangan Catatan Kepolisian.</p>
                     </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-                <div class="media block-6 services d-block bg-white rounded-lg shadow ftco-animate">
-                    <div class="icon shadow d-flex align-items-center justify-content-center"><span
-                            class="flaticon-vector"></span></div>
-                    <div class="media-body">
-                        <h3 class="heading mb-3">Pembuatan SKCK</h3>
-                        <p>A small river named Duden flows by their place and supplies.</p>
-                    </div>
-                </div>
+                </a>
             </div>
             <div class="col-md-6 col-lg-3">
                 <div class="media block-6 services d-block bg-white rounded-lg shadow ftco-animate">
@@ -91,6 +81,18 @@
                     </div>
                 </div>
             </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="media block-6 services d-block bg-white rounded-lg shadow ftco-animate">
+                    <div class="icon shadow d-flex align-items-center justify-content-center"><span
+                            class="flaticon-zoom"></span></div>
+                    <div class="media-body">
+                        <h3 class="heading mb-3">Surat Usaha</h3>
+                        <p>A small river named Duden flows by their place and supplies.</p>
+                    </div>
+                </div>
+            </div>
+
             <div class="col-md-6 col-lg-3">
                 <div class="media block-6 services d-block bg-white rounded-lg shadow ftco-animate">
                     <div class="icon shadow d-flex align-items-center justify-content-center"><span
@@ -113,36 +115,6 @@
                 </div>
             </div>
 
-            <div class="col-md-6 col-lg-3">
-                <div class="media block-6 services d-block bg-white rounded-lg shadow ftco-animate">
-                    <div class="icon shadow d-flex align-items-center justify-content-center"><span
-                            class="flaticon-zoom"></span></div>
-                    <div class="media-body">
-                        <h3 class="heading mb-3">Surat Usaha</h3>
-                        <p>A small river named Duden flows by their place and supplies.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-                <div class="media block-6 services d-block bg-white rounded-lg shadow ftco-animate">
-                    <div class="icon shadow d-flex align-items-center justify-content-center"><span
-                            class="flaticon-zoom"></span></div>
-                    <div class="media-body">
-                        <h3 class="heading mb-3">Pengantar KK</h3>
-                        <p>A small river named Duden flows by their place and supplies.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-                <div class="media block-6 services d-block bg-white rounded-lg shadow ftco-animate">
-                    <div class="icon shadow d-flex align-items-center justify-content-center"><span
-                            class="flaticon-zoom"></span></div>
-                    <div class="media-body">
-                        <h3 class="heading mb-3">Perubahan KK</h3>
-                        <p>A small river named Duden flows by their place and supplies.</p>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </section>
