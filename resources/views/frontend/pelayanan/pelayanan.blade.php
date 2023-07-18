@@ -30,7 +30,15 @@
                     </div>
                 </a>
             </div>
-
+            <div class="col-md-6 col-lg-3">
+                <a href="{{ route('permohonan-kk.index') }}" class="media block-6 services d-block bg-white rounded-lg shadow ftco-animate">
+                    <div class="icon shadow d-flex align-items-center justify-content-center"><span class="flaticon-app-development"></span></div>
+                    <div class="media-body">
+                        <h3 class="heading mb-3">Permohonan KK</h3>
+                        <p>Buat surat pengantar pembuatan/perubahan Kartu Keluarga.</p>
+                    </div>
+                </a>
+            </div>
             <div class="col-md-6 col-lg-3">
                 <div class="media block-6 services d-block bg-white rounded-lg shadow ftco-animate">
                     <div class="icon shadow d-flex align-items-center justify-content-center"><span

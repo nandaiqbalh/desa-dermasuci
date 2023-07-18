@@ -7,7 +7,7 @@
             <h6 class="m-0 font-weight-bold text-primary">Edit Surat</h6>
         </div>
         <div class="card-body">
-            <form action="{{ route('admin_perubahan-ktp.update', $data->id) }}" method="POST">
+            <form action="{{ route('admin_permohonan-kk.update', $data->id) }}" method="POST">
                 @csrf
                 @method('PUT')
 

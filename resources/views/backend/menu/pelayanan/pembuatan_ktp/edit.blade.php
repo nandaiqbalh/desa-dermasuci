@@ -13,7 +13,7 @@
 
                 <div class="form-group">
                     <label for="no_surat">No Surat</label>
-                    <input type="text" name="no_surat" id="no_surat" class="form-control" value="{{ $data->no_surat }}" required>
+                    <input type="text" name="no_surat" id="no_surat" class="form-control" value="{{ $data->no_surat }}">
                 </div>
 
                 <div class="form-group">

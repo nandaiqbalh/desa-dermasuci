@@ -4,7 +4,7 @@
 <div class="container">
     <div class="card">
         <div class="card-header">
-            <h6 class="m-0 font-weight-bold text-primary">Pengajuan Surat Pengantar Perubahan KTP</h6>
+            <h6 class="m-0 font-weight-bold text-primary">Pengajuan Surat Pengantar Permohonan KK</h6>
         </div>
         <div class="card-body">
             @if (session('success'))
@@ -25,7 +25,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach($perubahan_ktp as $item)
+                        @foreach($permohonan_kk as $item)
                             <tr>
                                 <td>{{ $item->no_surat }}</td>
                                 <td>{{ $item->nama }}</td>
@@ -40,8 +40,8 @@
                                 </td>
 
                                 <td>
-                                        <a href="{{ route('admin_perubahan-ktp.edit', $item->id) }}" class="btn btn-primary" title="Edit"><i class="fas fa-edit"></i></a>
-                                        <a href="{{ route('admin_perubahan-ktp.print', $item->id) }}" class="btn btn-info" title="Print as PDF"><i class="fas fa-file-pdf"></i></a>
+                                        <a href="{{ route('admin_permohonan-kk.edit', $item->id) }}" class="btn btn-primary" title="Edit"><i class="fas fa-edit"></i></a>
+                                        <a href="{{ route('admin_permohonan-kk.print', $item->id) }}" class="btn btn-info" title="Print as PDF"><i class="fas fa-file-pdf"></i></a>
                                         <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal{{ $item->id }}" title="Delete"><i class="fas fa-trash-alt"></i></button>
                                         <!-- Modal -->
                                         <div class="modal fade" id="deleteModal{{ $item->id }}" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel{{ $item->id }}" aria-hidden="true">
@@ -58,7 +58,7 @@
                                                     </div>
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                        <form action="{{ route('admin_perubahan-ktp.destroy', $item->id) }}" method="POST">
+                                                        <form action="{{ route('admin_permohonan-kk.destroy', $item->id) }}" method="POST">
                                                             @csrf
                                                             @method('DELETE')
                                                             <button type="submit" class="btn btn-danger">Delete</button>

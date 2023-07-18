@@ -29,7 +29,7 @@
                             <tr>
                                 <td>{{ $pembuatanKTP->no_surat }}</td>
                                 <td>{{ $pembuatanKTP->nama }}</td>
-                                <td>{{ $pembuatanKTP->no_hp }}</td>
+                                <td><a href="https://wa.me/{{ $pembuatanKTP->no_hp }}" target="_blank" class="btn btn-success">Kirim Pesan</a></td>
                                 <td>{{ $pembuatanKTP->nik }}</td>
                                 <td>
                                         @if ($pembuatanKTP->status == 0)

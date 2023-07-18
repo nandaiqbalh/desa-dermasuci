@@ -3,11 +3,13 @@
 use App\Http\Controllers\Backend\BeritaController;
 use App\Http\Controllers\Backend\BPembuatanKTPController;
 use App\Http\Controllers\Backend\HighlightController;
+use App\Http\Controllers\Backend\Pelayanan\BEPermohonanKKController;
 use App\Http\Controllers\Backend\Pelayanan\PerubahanKTPController as PelayananPerubahanKTPController;
 use App\Http\Controllers\Backend\ProfilController;
 use App\Http\Controllers\Frontend\BerandaController;
 use App\Http\Controllers\Frontend\BeritaController as FrontendBeritaController;
 use App\Http\Controllers\Frontend\PelayananController;
+use App\Http\Controllers\Pelayanan\PermohonanKKController;
 use App\Http\Controllers\Pelayanan\PerubahanKTPController;
 use App\Http\Controllers\PembuatanKTPController;
 use Illuminate\Support\Facades\Route;
@@ -54,6 +56,13 @@ Route::middleware([
 
     Route::get('/dalam-review/{id}', [PelayananPerubahanKTPController::class, 'dalamReviewAction'])->name('dalam-review');
     Route::get('/selesai/{id}', [PelayananPerubahanKTPController::class, 'selesaiAction'])->name('selesai');
+
+    // permohonan KK
+    Route::resource('admin/admin_permohonan-kk', BEPermohonanKKController::class);
+    Route::get('/admin_permohonan-kk/print/{id}', [BEPermohonanKKController::class, 'print'])->name('admin_permohonan-kk.print');
+
+    Route::get('/dalam-review/{id}', [BEPermohonanKKController::class, 'dalamReviewAction'])->name('dalam-review');
+    Route::get('/selesai/{id}', [BEPermohonanKKController::class, 'selesaiAction'])->name('selesai');
 });
 
 Route::resource('beranda', BerandaController::class);
@@ -63,6 +72,8 @@ Route::resource('berita', FrontendBeritaController::class);
 // pelayanan
 Route::resource('pembuatan-ktp', PembuatanKTPController::class);
 Route::resource('perubahan-ktp', PerubahanKTPController::class);
+Route::resource('permohonan-kk', PermohonanKKController::class);
+
 
 
 Route::get('/', [BerandaController::class, 'index']);
