@@ -153,7 +153,7 @@
     <p class="content">Demikian Surat Pengantar ini dibuat untuk dapat dipergunakan sebagaimana mestinya.</p>
 
     <div class="signature">
-        <p>Mengetahui</p>
+        <p>Dermasuci, {{ date('d F Y', strtotime($data->updated_at)) }}</p>
         <p>Pemerintahan Desa Dermasuci</p>
         <br>
         <p>………………………….</p>
