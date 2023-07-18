@@ -3,6 +3,7 @@
 use App\Http\Controllers\Backend\BeritaController;
 use App\Http\Controllers\Backend\BPembuatanKTPController;
 use App\Http\Controllers\Backend\HighlightController;
+use App\Http\Controllers\Backend\Pelayanan\BEAktaKelahiranController;
 use App\Http\Controllers\Backend\Pelayanan\BEKeteranganDomisiliController;
 use App\Http\Controllers\Backend\Pelayanan\BEKeteranganUsahaController;
 use App\Http\Controllers\Backend\Pelayanan\BEPermohonanKKController;
@@ -14,6 +15,7 @@ use App\Http\Controllers\Backend\ProfilController;
 use App\Http\Controllers\Frontend\BerandaController;
 use App\Http\Controllers\Frontend\BeritaController as FrontendBeritaController;
 use App\Http\Controllers\Frontend\PelayananController;
+use App\Http\Controllers\Pelayanan\AktaKelahiranController;
 use App\Http\Controllers\Pelayanan\KeteranganDomisiliController;
 use App\Http\Controllers\Pelayanan\KeteranganUsahaController;
 use App\Http\Controllers\Pelayanan\PermohonanKKController;
@@ -109,6 +111,13 @@ Route::middleware([
 
     Route::get('/keterangan-usaha-dalam-review/{id}', [BEKeteranganUsahaController::class, 'dalamReviewAction'])->name('keterangan-usaha-dalam-review');
     Route::get('/keterangan-usaha-selesai/{id}', [BEKeteranganUsahaController::class, 'selesaiAction'])->name('keterangan-usaha-selesai');
+
+    // Pengantar Akta Kelahiran
+    Route::resource('admin/admin_akta-kelahiran', BEAktaKelahiranController::class);
+    Route::get('/admin_akta-kelahiran/print/{id}', [BEAktaKelahiranController::class, 'print'])->name('admin_akta-kelahiran.print');
+
+    Route::get('/akta-kelahiran-dalam-review/{id}', [BEAktaKelahiranController::class, 'dalamReviewAction'])->name('akta-kelahiran-dalam-review');
+    Route::get('/akta-kelahiran-selesai/{id}', [BEAktaKelahiranController::class, 'selesaiAction'])->name('akta-kelahiran-selesai');
 });
 
 Route::resource('beranda', BerandaController::class);
@@ -124,5 +133,6 @@ Route::resource('pindah-domisili', PindahDomisiliController::class);
 Route::resource('permohonan-skck', PermohonanSKCKController::class);
 Route::resource('permohonan-sktm', PermohonanSKTMController::class);
 Route::resource('keterangan-usaha', KeteranganUsahaController::class);
+Route::resource('akta-kelahiran', AktaKelahiranController::class);
 
 Route::get('/', [BerandaController::class, 'index']);
