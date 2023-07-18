@@ -1,0 +1,87 @@
+@extends('backend.backend_master')
+
+@section('main_backend')
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h6 class="m-0 font-weight-bold text-primary">Edit Surat</h6>
+        </div>
+        <div class="card-body">
+            <form action="{{ route('admin_keterangan-usaha.update', $data->id) }}" method="POST">
+                @csrf
+                @method('PUT')
+
+                <p><b>Data Pemohon</b></p>
+
+                <div class="form-group">
+                    <label for="no_surat">No Surat</label>
+                    <input type="text" name="no_surat" id="no_surat" class="form-control" value="{{ $data->no_surat }}">
+                </div>
+
+                <div class="form-group">
+                    <label for="nama">Nama</label>
+                    <input type="text" name="nama" id="nama" class="form-control" value="{{ $data->nama }}" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="no_hp">No HP</label>
+                    <input type="text" name="no_hp" id="no_hp" class="form-control" value="{{ $data->no_hp }}" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="nik">NIK</label>
+                    <input type="text" name="nik" id="nik" class="form-control" value="{{ $data->nik }}" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="tempat_tanggal_lahir">Tempat/Tanggal Lahir</label>
+                    <input type="text" name="tempat_tanggal_lahir" id="tempat_tanggal_lahir" class="form-control" value="{{ $data->tempat_tanggal_lahir }}" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="pekerjaan">Pekerjaan</label>
+                    <input type="text" name="pekerjaan" id="pekerjaan" class="form-control" value="{{ $data->pekerjaan }}" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="alamat">Alamat</label>
+                    <input type="text" name="alamat" id="alamat" class="form-control" value="{{ $data->alamat }}" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="agama">Agama</label>
+                    <input type="text" name="agama" id="agama" class="form-control" value="{{ $data->agama }}" required>
+                </div>
+
+                <p><b>Data Usaha</b></p>
+
+                <div class="form-group">
+                    <label for="nama_usaha">Nama Usaha</label>
+                    <input type="text" name="nama_usaha" id="nama_usaha" class="form-control" value="{{ $data->nama_usaha }}" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="tanggal_usaha">Tanggal Usaha</label>
+                    <input type="text" name="tanggal_usaha" id="tanggal_usaha" class="form-control" value="{{ $data->tanggal_usaha }}" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="alamat_usaha">Alamat Usaha</label>
+                    <input type="text" name="alamat_usaha" id="alamat_usaha" class="form-control" value="{{ $data->alamat_usaha }}" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="jenis_usaha">Jenis Usaha</label>
+                    <input type="text" name="jenis_usaha" id="jenis_usaha" class="form-control" value="{{ $data->jenis_usaha }}" required>
+                </div>
+                <div class="form-group">
+                    <label for="catatan">Catatan</label>
+                    <textarea name="catatan" id="catatan" class="form-control">{{ $data->catatan }}</textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Update</button>
+            </form>
+        </div>
+    </div>
+</div>
+@endsection

@@ -82,14 +82,13 @@
             </div>
 
             <div class="col-md-6 col-lg-3">
-                <div class="media block-6 services d-block bg-white rounded-lg shadow ftco-animate">
-                    <div class="icon shadow d-flex align-items-center justify-content-center"><span
-                            class="flaticon-zoom"></span></div>
+                <a href="{{ route('keterangan-usaha.index') }}" class="media block-6 services d-block bg-white rounded-lg shadow ftco-animate">
+                    <div class="icon shadow d-flex align-items-center justify-content-center"><span class="flaticon-app-development"></span></div>
                     <div class="media-body">
-                        <h3 class="heading mb-3">Surat Usaha</h3>
-                        <p>A small river named Duden flows by their place and supplies.</p>
+                        <h3 class="heading mb-3">Surat Keterangan Usaha</h3>
+                        <p>Buat Surat Keterangan Usaha.</p>
                     </div>
-                </div>
+                </a>
             </div>
 
             <div class="col-md-6 col-lg-3">

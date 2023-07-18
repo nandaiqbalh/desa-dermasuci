@@ -4,6 +4,7 @@ use App\Http\Controllers\Backend\BeritaController;
 use App\Http\Controllers\Backend\BPembuatanKTPController;
 use App\Http\Controllers\Backend\HighlightController;
 use App\Http\Controllers\Backend\Pelayanan\BEKeteranganDomisiliController;
+use App\Http\Controllers\Backend\Pelayanan\BEKeteranganUsahaController;
 use App\Http\Controllers\Backend\Pelayanan\BEPermohonanKKController;
 use App\Http\Controllers\Backend\Pelayanan\BEPermohonanSKCKController;
 use App\Http\Controllers\Backend\Pelayanan\BEPermohonanSKTMController;
@@ -14,12 +15,14 @@ use App\Http\Controllers\Frontend\BerandaController;
 use App\Http\Controllers\Frontend\BeritaController as FrontendBeritaController;
 use App\Http\Controllers\Frontend\PelayananController;
 use App\Http\Controllers\Pelayanan\KeteranganDomisiliController;
+use App\Http\Controllers\Pelayanan\KeteranganUsahaController;
 use App\Http\Controllers\Pelayanan\PermohonanKKController;
 use App\Http\Controllers\Pelayanan\PermohonanSKCKController;
 use App\Http\Controllers\Pelayanan\PermohonanSKTMController;
 use App\Http\Controllers\Pelayanan\PerubahanKTPController;
 use App\Http\Controllers\Pelayanan\PindahDomisiliController;
 use App\Http\Controllers\PembuatanKTPController;
+use App\Models\Pelayanan\KeteranganUsaha;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -99,6 +102,13 @@ Route::middleware([
 
     Route::get('/dalam-review/{id}', [BEPermohonanSKTMController::class, 'dalamReviewAction'])->name('dalam-review');
     Route::get('/selesai/{id}', [BEPermohonanSKTMController::class, 'selesaiAction'])->name('selesai');
+
+    // Permohonan SKTM
+    Route::resource('admin/admin_keterangan-usaha', BEKeteranganUsahaController::class);
+    Route::get('/admin_keterangan-usaha/print/{id}', [BEKeteranganUsahaController::class, 'print'])->name('admin_keterangan-usaha.print');
+
+    Route::get('/dalam-review/{id}', [BEKeteranganUsahaController::class, 'dalamReviewAction'])->name('dalam-review');
+    Route::get('/selesai/{id}', [BEKeteranganUsahaController::class, 'selesaiAction'])->name('selesai');
 });
 
 Route::resource('beranda', BerandaController::class);
@@ -113,10 +123,6 @@ Route::resource('keterangan-domisili', KeteranganDomisiliController::class);
 Route::resource('pindah-domisili', PindahDomisiliController::class);
 Route::resource('permohonan-skck', PermohonanSKCKController::class);
 Route::resource('permohonan-sktm', PermohonanSKTMController::class);
-
-
-
-
-
+Route::resource('keterangan-usaha', KeteranganUsahaController::class);
 
 Route::get('/', [BerandaController::class, 'index']);
