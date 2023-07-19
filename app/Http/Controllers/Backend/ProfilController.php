@@ -86,6 +86,7 @@ class ProfilController extends Controller
         $request->validate([
             'title' => 'required',
             'subtitle' => 'required',
+            'image_file' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 
         $profil->title = $request->title;
@@ -95,6 +96,11 @@ class ProfilController extends Controller
             $request->validate([
                 'image_file' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
             ]);
+
+            // Delete the old image file if it exists
+            if ($profil->image_file) {
+                Storage::disk('public')->delete('images/' . $profil->image_file);
+            }
 
             $imageName = time() . '.' . $request->image_file->extension();
             $request->image_file->move(public_path('images'), $imageName);
@@ -109,11 +115,16 @@ class ProfilController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\profil  $profil
+     * @param  \App\Models\Profil  $profil
      * @return \Illuminate\Http\Response
      */
     public function destroy(Profil $profil)
     {
+        // Delete the image file if it exists
+        if ($profil->image_file) {
+            Storage::disk('public')->delete('images/' . $profil->image_file);
+        }
+
         $profil->delete();
 
         return redirect()->route('profil.index')->with('success', 'Profil berhasil dihapus.');

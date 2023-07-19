@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use App\Models\Highlight;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class HighlightController extends Controller
 {
@@ -88,6 +89,7 @@ class HighlightController extends Controller
         $request->validate([
             'title' => 'required',
             'subtitle' => 'required',
+            'image_file' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 
         $highlight->title = $request->title;
@@ -97,6 +99,11 @@ class HighlightController extends Controller
             $request->validate([
                 'image_file' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
             ]);
+
+            // Delete the old image file if it exists
+            if ($highlight->image_file) {
+                Storage::disk('public')->delete('images/' . $highlight->image_file);
+            }
 
             $imageName = time() . '.' . $request->image_file->extension();
             $request->image_file->move(public_path('images'), $imageName);
@@ -116,6 +123,11 @@ class HighlightController extends Controller
      */
     public function destroy(Highlight $highlight)
     {
+        // Delete the image file if it exists
+        if ($highlight->image_file) {
+            Storage::disk('public')->delete('images/' . $highlight->image_file);
+        }
+
         $highlight->delete();
 
         return redirect()->route('highlights.index')->with('success', 'Sorotan berhasil dihapus.');

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use App\Models\Berita;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class BeritaController extends Controller
 {
@@ -96,6 +97,11 @@ class BeritaController extends Controller
                 'thumbnail' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
             ]);
 
+            // Delete the old thumbnail if it exists
+            if ($berita->thumbnail) {
+                Storage::disk('public')->delete('images/' . $berita->thumbnail);
+            }
+
             $imageName = time() . '.' . $request->thumbnail->extension();
             $request->thumbnail->move(public_path('images'), $imageName);
             $berita->thumbnail = $imageName;
@@ -113,6 +119,12 @@ class BeritaController extends Controller
     public function destroy(string $id)
     {
         $berita = Berita::findOrFail($id);
+
+        // Delete the thumbnail if it exists
+        if ($berita->thumbnail) {
+            Storage::disk('public')->delete('images/' . $berita->thumbnail);
+        }
+
         $berita->delete();
 
         return redirect()->route('admin_berita.index')->with('success', 'Berita berhasil dihapus!');
