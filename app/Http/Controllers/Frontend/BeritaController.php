@@ -13,8 +13,10 @@ class BeritaController extends Controller
      */
     public function index()
     {
+        $highlightberitas = Berita::paginate(2); // Paginate the first set of beritas, with 5 items per page
+
         $beritas = Berita::all()->reverse();
-        return view('frontend.berita.berita', compact('beritas'));
+        return view('frontend.berita.berita', compact('beritas', 'highlightberitas'));
     }
 
     /**
@@ -38,8 +40,9 @@ class BeritaController extends Controller
      */
     public function show(string $id)
     {
+        $beritas = Berita::all()->reverse();
         $berita = Berita::findOrFail($id);
-        return view('frontend.berita.berita_detail', compact('berita'));
+        return view('frontend.berita.berita_detail', compact('berita', 'beritas'));
     }
 
     /**

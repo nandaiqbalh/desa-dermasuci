@@ -4,6 +4,13 @@
 
 <section class="ftco-section bg-light" id="blog-section">
     <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12 heading-section text-center ftco-animate mb-5">
+                <span class="subheading">Selamat Datang,</span>
+                <h2 class="mb-4">Porta Berita Desa Dermasuci</h2>
+                <p>Temukan apa yang terjadi baru-baru ini.</p>
+            </div>
+        </div>
         <div class="row d-flex">
 
             @foreach ($beritas as $berita)
