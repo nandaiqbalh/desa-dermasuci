@@ -8,9 +8,10 @@
         }
 
         body {
-            margin: 20mm;
-            font-family: Arial, sans-serif;
-        }
+        margin: 20mm;
+        font-family: "Times New Roman", serif;
+        font-size: 12pt;
+    }
 
         table {
             border-collapse: collapse;
@@ -105,7 +106,7 @@
         </tr>
         <tr>
             <td class="content-label">Alamat</td>
-            <td class="content-value">: Desa Dermasuci Rt.01 Rw.01 Kec. Pangkah Kab. Tegal</td>
+            <td class="content-value">: Desa Dermasuci Rt.01 Rw.01 Kec. Pangkah Kabupaten Tegal</td>
         </tr>
 
     </table>
