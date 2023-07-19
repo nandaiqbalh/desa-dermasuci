@@ -111,6 +111,16 @@
                 </a>
             </div>
 
+            <div class="col-md-6 col-lg-3">
+                <a href="{{ route('pengantar-nikah.index') }}" class="media block-6 services d-block bg-white rounded-lg shadow ftco-animate">
+                    <div class="icon shadow d-flex align-items-center justify-content-center"><span class="flaticon-app-development"></span></div>
+                    <div class="media-body">
+                        <h3 class="heading mb-3">Pengantar Nikah</h3>
+                        <p>Buat Surat Pengantar Nikah dari Desa Dermasuci.</p>
+                    </div>
+                </a>
+            </div>
+
         </div>
     </div>
 </section>

@@ -7,6 +7,7 @@ use App\Http\Controllers\Backend\Pelayanan\BEAktaKelahiranController;
 use App\Http\Controllers\Backend\Pelayanan\BEAktaKematianController;
 use App\Http\Controllers\Backend\Pelayanan\BEKeteranganDomisiliController;
 use App\Http\Controllers\Backend\Pelayanan\BEKeteranganUsahaController;
+use App\Http\Controllers\Backend\Pelayanan\BEPengantarNikahController;
 use App\Http\Controllers\Backend\Pelayanan\BEPermohonanKKController;
 use App\Http\Controllers\Backend\Pelayanan\BEPermohonanSKCKController;
 use App\Http\Controllers\Backend\Pelayanan\BEPermohonanSKTMController;
@@ -20,6 +21,7 @@ use App\Http\Controllers\Pelayanan\AktaKelahiranController;
 use App\Http\Controllers\Pelayanan\AktaKematianController;
 use App\Http\Controllers\Pelayanan\KeteranganDomisiliController;
 use App\Http\Controllers\Pelayanan\KeteranganUsahaController;
+use App\Http\Controllers\Pelayanan\PengantarNikahController;
 use App\Http\Controllers\Pelayanan\PermohonanKKController;
 use App\Http\Controllers\Pelayanan\PermohonanSKCKController;
 use App\Http\Controllers\Pelayanan\PermohonanSKTMController;
@@ -120,12 +122,20 @@ Route::middleware([
 
     Route::get('/akta-kelahiran-dalam-review/{id}', [BEAktaKelahiranController::class, 'dalamReviewAction'])->name('akta-kelahiran-dalam-review');
     Route::get('/akta-kelahiran-selesai/{id}', [BEAktaKelahiranController::class, 'selesaiAction'])->name('akta-kelahiran-selesai');
+
     // Pengantar Akta Kelahiran
     Route::resource('admin/admin_akta-kematian', BEAktaKematianController::class);
     Route::get('/admin_akta-kematian/print/{id}', [BEAktaKematianController::class, 'print'])->name('admin_akta-kematian.print');
 
     Route::get('/akta-kematian-dalam-review/{id}', [BEAktaKematianController::class, 'dalamReviewAction'])->name('akta-kematian-dalam-review');
     Route::get('/akta-kematian-selesai/{id}', [BEAktaKematianController::class, 'selesaiAction'])->name('akta-kematian-selesai');
+
+    // Pengantar Akta Kelahiran
+    Route::resource('admin/admin_pengantar-nikah', BEPengantarNikahController::class);
+    Route::get('/admin_pengantar-nikah/print/{id}', [BEPengantarNikahController::class, 'print'])->name('admin_pengantar-nikah.print');
+
+    Route::get('/pengantar-nikah-dalam-review/{id}', [BEPengantarNikahController::class, 'dalamReviewAction'])->name('pengantar-nikah-dalam-review');
+    Route::get('/pengantar-nikah-selesai/{id}', [BEPengantarNikahController::class, 'selesaiAction'])->name('pengantar-nikah-selesai');
 });
 
 Route::resource('beranda', BerandaController::class);
@@ -143,5 +153,6 @@ Route::resource('permohonan-sktm', PermohonanSKTMController::class);
 Route::resource('keterangan-usaha', KeteranganUsahaController::class);
 Route::resource('akta-kelahiran', AktaKelahiranController::class);
 Route::resource('akta-kematian', AktaKematianController::class);
+Route::resource('pengantar-nikah', PengantarNikahController::class);
 
 Route::get('/', [BerandaController::class, 'index']);

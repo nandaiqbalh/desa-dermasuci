@@ -66,6 +66,7 @@
                         <a class="collapse-item" href="{{route('admin_keterangan-usaha.index')}}">Keterangan Usaha</a>
                         <a class="collapse-item" href="{{route('admin_akta-kelahiran.index')}}">Akta Kelahiran</a>
                         <a class="collapse-item" href="{{route('admin_akta-kematian.index')}}">Akta Kematian</a>
+                        <a class="collapse-item" href="{{route('admin_pengantar-nikah.index')}}">Pengantar Nikah</a>
 
                     </div>
                 </div>
