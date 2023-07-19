@@ -65,6 +65,7 @@
                         <a class="collapse-item" href="{{route('admin_permohonan-sktm.index')}}">Permohonan SKTM</a>
                         <a class="collapse-item" href="{{route('admin_keterangan-usaha.index')}}">Keterangan Usaha</a>
                         <a class="collapse-item" href="{{route('admin_akta-kelahiran.index')}}">Akta Kelahiran</a>
+                        <a class="collapse-item" href="{{route('admin_akta-kematian.index')}}">Akta Kematian</a>
 
                     </div>
                 </div>
