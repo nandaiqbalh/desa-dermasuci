@@ -13,10 +13,12 @@ use App\Http\Controllers\Backend\Pelayanan\BEPermohonanSKCKController;
 use App\Http\Controllers\Backend\Pelayanan\BEPermohonanSKTMController;
 use App\Http\Controllers\Backend\Pelayanan\BEPindahDomisiliController;
 use App\Http\Controllers\Backend\Pelayanan\PerubahanKTPController as PelayananPerubahanKTPController;
+use App\Http\Controllers\Backend\Potensi\BEPotensiController;
 use App\Http\Controllers\Backend\ProfilController;
 use App\Http\Controllers\Frontend\BerandaController;
 use App\Http\Controllers\Frontend\BeritaController as FrontendBeritaController;
 use App\Http\Controllers\Frontend\PelayananController;
+use App\Http\Controllers\Frontend\Potensi\FEPotensiController;
 use App\Http\Controllers\Pelayanan\AktaKelahiranController;
 use App\Http\Controllers\Pelayanan\AktaKematianController;
 use App\Http\Controllers\Pelayanan\KeteranganDomisiliController;
@@ -51,13 +53,12 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified'
 ])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('backend.component.index');
-    })->name('dashboard');
+    Route::get('/dashboard', [HighlightController::class, 'index'])->name('dashboard');
 
     Route::resource('admin/highlights', HighlightController::class);
     Route::resource('admin/profil', ProfilController::class);
     Route::resource('admin/admin_berita', BeritaController::class);
+    Route::resource('admin/admin_potensi', BEPotensiController::class);
 
     // pembuatan ktp
     Route::resource('admin/admin_pembuatan-ktp', BPembuatanKTPController::class);
@@ -141,6 +142,10 @@ Route::middleware([
 Route::resource('beranda', BerandaController::class);
 Route::resource('pelayanan', PelayananController::class);
 Route::resource('berita', FrontendBeritaController::class);
+
+// potensi
+Route::resource('potensi', FEPotensiController::class);
+
 
 // pelayanan
 Route::resource('pembuatan-ktp', PembuatanKTPController::class);

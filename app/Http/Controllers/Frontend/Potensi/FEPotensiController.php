@@ -1,23 +1,21 @@
 <?php
 
-namespace App\Http\Controllers\Frontend;
+namespace App\Http\Controllers\Frontend\Potensi;
 
 use App\Http\Controllers\Controller;
 use App\Models\Frontend\Potensi;
-use App\Models\Highlight;
-use App\Models\Profil;
 use Illuminate\Http\Request;
 
-class BerandaController extends Controller
+class FEPotensiController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $highlights = Highlight::all();
-        $profil = Profil::latest()->limit(1)->get();
-        return view('frontend.beranda.beranda', compact('highlights', 'profil'));
+
+        $potensi = Potensi::all();
+        return view('frontend.potensi.potensi', compact('potensi'));
     }
 
     /**

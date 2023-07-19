@@ -12,16 +12,6 @@
             </a>
 
             <!-- Divider -->
-            <hr class="sidebar-divider my-0">
-
-            <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
-                <a class="nav-link" href="{{route('dashboard')}}">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
-            </li>
-
-            <!-- Divider -->
             <hr class="sidebar-divider">
 
             <!-- Heading -->
@@ -40,6 +30,12 @@
                 <a class="nav-link" href="{{route('profil.index')}}">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Profil Desa</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="{{route('admin_potensi.index')}}">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Potensi Desa</span></a>
             </li>
 
             <!-- Heading -->
