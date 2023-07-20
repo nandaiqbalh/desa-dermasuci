@@ -13,6 +13,7 @@ use App\Http\Controllers\Backend\Pelayanan\BEPermohonanSKCKController;
 use App\Http\Controllers\Backend\Pelayanan\BEPermohonanSKTMController;
 use App\Http\Controllers\Backend\Pelayanan\BEPindahDomisiliController;
 use App\Http\Controllers\Backend\Pelayanan\PerubahanKTPController as PelayananPerubahanKTPController;
+use App\Http\Controllers\Backend\Pengaduan\BEKontakController;
 use App\Http\Controllers\Backend\Pengaduan\BEPengaduanController;
 use App\Http\Controllers\Backend\Potensi\BEPotensiController;
 use App\Http\Controllers\Backend\ProfilController;
@@ -62,11 +63,13 @@ Route::middleware([
     Route::resource('admin/admin_berita', BeritaController::class);
     Route::resource('admin/admin_potensi', BEPotensiController::class);
 
-
+    // pengaduan
     Route::resource('admin/admin_pengaduan', BEPengaduanController::class);
     Route::get('/admin_pengaduan/dalam-review/{id}', [BEPengaduanController::class, 'dalamReviewAction'])->name('admin_pengaduan-dalam-review');
     Route::get('/admin_pengaduan/selesai/{id}', [BEPengaduanController::class, 'selesaiAction'])->name('admin_pengaduan-selesai');
 
+    // kontak
+    Route::resource('admin/admin_kontak', BEKontakController::class);
 
     // pembuatan ktp
     Route::resource('admin/admin_pembuatan-ktp', BPembuatanKTPController::class);

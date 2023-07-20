@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend\Penganduan;
 
 use App\Http\Controllers\Controller;
+use App\Models\Frontend\Pengaduan\Kontak;
 use App\Models\Frontend\Pengaduan\Pengaduan;
 use Illuminate\Http\Request;
 
@@ -13,7 +14,8 @@ class FEPengaduanController extends Controller
      */
     public function index()
     {
-        return view('frontend.pengaduan.pengaduan');
+        $kontak = Kontak::latest()->limit(1)->get();
+        return view('frontend.pengaduan.pengaduan', compact('kontak'));
     }
 
     /**

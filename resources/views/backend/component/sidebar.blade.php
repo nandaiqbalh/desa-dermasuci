@@ -94,7 +94,7 @@
                 <div id="collapseKontak" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Kontak dan Pengaduan</h6>
-                        <a class="collapse-item" href="#">Kontak</a>
+                        <a class="collapse-item" href="{{route('admin_kontak.index')}}">Kontak</a>
                         <a class="collapse-item" href="{{route('admin_pengaduan.index')}}">Pengaduan</a>
                     </div>
                 </div>
