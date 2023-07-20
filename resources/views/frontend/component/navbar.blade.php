@@ -11,7 +11,7 @@
                 <li class="nav-item"><a href="{{route('potensi.index')}}" class="nav-link"><span>Potensi</span></a></li>
                 <li class="nav-item"><a href="{{route('pelayanan.index')}}" class="nav-link"><span>Pelayanan</span></a></li>
                 <li class="nav-item"><a href="{{route('berita.index')}}" class="nav-link"><span>Berita</span></a></li>
-                <li class="nav-item"><a href="#" class="nav-link"><span>Kontak & Pengaduan</span></a></li>
+                <li class="nav-item"><a href="{{route('pengaduan.index')}}" class="nav-link"><span>Kontak & Pengaduan</span></a></li>
 
             </ul>
         </div>

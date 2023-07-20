@@ -5,9 +5,9 @@
     <div class="container">
         <div class="row justify-content-center mb-5 pb-5">
             <div class="col-md-7 heading-section text-center ftco-animate">
-                <span class="subheading">Cari tahu potensi kami</span>
+                <span class="subheading">Selamat datang,</span>
                 <h2 class="mb-4">Potensi Desa</h2>
-                <p>Desa Dermasuci dan segala potensinya.</p>
+                <p>Cari tahu mengenai Desa Dermasuci dan segala potensinya.</p>
             </div>
         </div>
 

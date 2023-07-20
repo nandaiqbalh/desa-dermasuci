@@ -13,11 +13,13 @@ use App\Http\Controllers\Backend\Pelayanan\BEPermohonanSKCKController;
 use App\Http\Controllers\Backend\Pelayanan\BEPermohonanSKTMController;
 use App\Http\Controllers\Backend\Pelayanan\BEPindahDomisiliController;
 use App\Http\Controllers\Backend\Pelayanan\PerubahanKTPController as PelayananPerubahanKTPController;
+use App\Http\Controllers\Backend\Pengaduan\BEPengaduanController;
 use App\Http\Controllers\Backend\Potensi\BEPotensiController;
 use App\Http\Controllers\Backend\ProfilController;
 use App\Http\Controllers\Frontend\BerandaController;
 use App\Http\Controllers\Frontend\BeritaController as FrontendBeritaController;
 use App\Http\Controllers\Frontend\PelayananController;
+use App\Http\Controllers\Frontend\Penganduan\FEPengaduanController;
 use App\Http\Controllers\Frontend\Potensi\FEPotensiController;
 use App\Http\Controllers\Pelayanan\AktaKelahiranController;
 use App\Http\Controllers\Pelayanan\AktaKematianController;
@@ -59,6 +61,12 @@ Route::middleware([
     Route::resource('admin/profil', ProfilController::class);
     Route::resource('admin/admin_berita', BeritaController::class);
     Route::resource('admin/admin_potensi', BEPotensiController::class);
+
+
+    Route::resource('admin/admin_pengaduan', BEPengaduanController::class);
+    Route::get('/admin_pengaduan/dalam-review/{id}', [BEPengaduanController::class, 'dalamReviewAction'])->name('admin_pengaduan-dalam-review');
+    Route::get('/admin_pengaduan/selesai/{id}', [BEPengaduanController::class, 'selesaiAction'])->name('admin_pengaduan-selesai');
+
 
     // pembuatan ktp
     Route::resource('admin/admin_pembuatan-ktp', BPembuatanKTPController::class);
@@ -142,6 +150,9 @@ Route::middleware([
 Route::resource('beranda', BerandaController::class);
 Route::resource('pelayanan', PelayananController::class);
 Route::resource('berita', FrontendBeritaController::class);
+
+// pengaduan
+Route::resource('pengaduan', FEPengaduanController::class);
 
 // potensi
 Route::resource('potensi', FEPotensiController::class);
