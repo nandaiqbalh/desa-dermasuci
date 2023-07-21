@@ -35,7 +35,6 @@ use App\Http\Controllers\Pelayanan\PermohonanSKTMController;
 use App\Http\Controllers\Pelayanan\PerubahanKTPController;
 use App\Http\Controllers\Pelayanan\PindahDomisiliController;
 use App\Http\Controllers\PembuatanKTPController;
-use App\Models\Pelayanan\KeteranganUsaha;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -58,7 +57,7 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified'
 ])->group(function () {
-    Route::get('/dashboard', [HighlightController::class, 'index'])->name('dashboard');
+    Route::get('/dashboard', [ProfilController::class, 'index'])->name('dashboard');
 
     Route::resource('admin/highlights', HighlightController::class);
     Route::resource('admin/profil', ProfilController::class);

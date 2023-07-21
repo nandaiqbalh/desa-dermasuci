@@ -34,8 +34,12 @@
                                     <img src="{{ asset('images/' . $item->photo) }}" alt="Image" width="100">
                                 </td>
                                 <td>
-                                    <a href="{{ route('admin_kades.edit', $item->id) }}" class="btn btn-primary">Edit</a>
-                                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal{{ $item->id }}">Delete</button>
+                                    <a href="{{ route('admin_kades.edit', $item->id) }}" class="btn btn-primary">
+                                        <i class="fas fa-edit"></i> <!-- Edit Icon -->
+                                    </a>
+                                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal{{ $item->id }}">
+                                        <i class="fas fa-trash"></i> <!-- Delete Icon -->
+                                    </button>
                                     <!-- Modal -->
                                     <div class="modal fade" id="deleteModal{{ $item->id }}" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel{{ $item->id }}" aria-hidden="true">
                                         <div class="modal-dialog" role="document">
@@ -54,13 +58,16 @@
                                                     <form action="{{ route('admin_kades.destroy', $item->id) }}" method="POST">
                                                         @csrf
                                                         @method('DELETE')
-                                                        <button type="submit" class="btn btn-danger">Delete</button>
+                                                        <button type="submit" class="btn btn-danger">
+                                                            <i class="fas fa-trash-alt"></i> <!-- Delete Icon -->
+                                                        </button>
                                                     </form>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </td>
+
                             </tr>
                         @endforeach
                     </tbody>

@@ -92,19 +92,23 @@ class BEAktaKematianController extends Controller
     {
         $data = AktaKematian::findOrFail($id);
         $validatedData = $request->validate([
-            'no_surat' => 'nullable',
-            'nama' => 'required',
-            'no_hp' => 'nullable',
-            'nik' => 'nullable',
-            'tempat_tanggal_lahir' => 'nullable',
-            'pekerjaan' => 'nullable',
-            'alamat' => 'nullable',
-            'agama' => 'nullable',
-            'nama_anak' => 'nullable',
-            'ttl_anak' => 'nullable',
-            'jenis_kelamin_anak' => 'nullable',
-            'keterangan_lain' => 'nullable',
-            'catatan' => 'nullable',
+            'no_surat' => 'nullable|string',
+            'nama' => 'nullable|string',
+            'no_hp' => 'nullable|string',
+            'nik' => 'nullable|string',
+            'tempat_tanggal_lahir' => 'nullable|string',
+            'alamat' => 'nullable|string',
+            'nama_termohon' => 'nullable|string',
+            'bin_termohon' => 'nullable|string',
+            'nik_termohon' => 'nullable|string',
+            'ttl_termohon' => 'nullable|string',
+            'jenis_kelamin_termohon' => 'nullable|string',
+            'agama_termohon' => 'nullable|string',
+            'tanggal_meninggal' => 'nullable|string',
+            'jam_meninggal' => 'nullable|string',
+            'tempat_meninggal' => 'nullable|string',
+            'status' => 'integer',
+            'catatan' => 'nullable|string',
         ]);
 
         $data->update($validatedData);

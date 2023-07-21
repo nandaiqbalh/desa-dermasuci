@@ -17,11 +17,11 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
-                            <th>No.</th>
-                            <th>Judul</th>
-                            <th>Profil</th>
-                            <th>Image</th>
-                            <th>Actions</th>
+                            <th style="width: 5%">No.</th>
+                            <th style="width: 15%">Judul</th>
+                            <th style="width: 40%">Profil</th>
+                            <th style="width: 15%">Image</th>
+                            <th style="width: 10%">Actions</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -34,8 +34,12 @@
                                     <img src="{{ asset('images/' . $item->image_file) }}" alt="Image" width="100">
                                 </td>
                                 <td>
-                                    <a href="{{ route('profil.edit', $item->id) }}" class="btn btn-primary">Edit</a>
-                                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal{{ $item->id }}">Delete</button>
+                                    <a href="{{ route('profil.edit', $item->id) }}" class="btn btn-primary">
+                                        <i class="fas fa-edit"></i> <!-- Edit Icon -->
+                                    </a>
+                                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal{{ $item->id }}">
+                                        <i class="fas fa-trash"></i> <!-- Delete Icon -->
+                                    </button>
                                     <!-- Modal -->
                                     <div class="modal fade" id="deleteModal{{ $item->id }}" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel{{ $item->id }}" aria-hidden="true">
                                         <div class="modal-dialog" role="document">
@@ -54,7 +58,9 @@
                                                     <form action="{{ route('profil.destroy', $item->id) }}" method="POST">
                                                         @csrf
                                                         @method('DELETE')
-                                                        <button type="submit" class="btn btn-danger">Delete</button>
+                                                        <button type="submit" class="btn btn-danger">
+                                                            <i class="fas fa-trash-alt"></i> <!-- Delete Icon -->
+                                                        </button>
                                                     </form>
                                                 </div>
                                             </div>

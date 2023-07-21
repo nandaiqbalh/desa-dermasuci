@@ -16,7 +16,7 @@ class ProfilController extends Controller
      */
     public function index()
     {
-        $profil = Profil::all()->reverse();
+        $profil = Profil::latest()->limit(1)->get();
         return view('backend.menu.profil.index', compact('profil'));
     }
 
