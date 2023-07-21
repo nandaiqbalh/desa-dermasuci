@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Frontend\Kades;
+use App\Models\Frontend\Perangkat;
 use App\Models\Frontend\Potensi;
 use App\Models\Highlight;
 use App\Models\Profil;
@@ -15,9 +17,11 @@ class BerandaController extends Controller
      */
     public function index()
     {
+        $kades = Kades::latest()->limit(1)->get();
+        $perangkat = Perangkat::all();
         $highlights = Highlight::all();
         $profil = Profil::latest()->limit(1)->get();
-        return view('frontend.beranda.beranda', compact('highlights', 'profil'));
+        return view('frontend.beranda.beranda', compact('highlights', 'profil', 'perangkat', 'kades'));
     }
 
     /**

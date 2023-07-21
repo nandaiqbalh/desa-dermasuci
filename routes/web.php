@@ -15,6 +15,8 @@ use App\Http\Controllers\Backend\Pelayanan\BEPindahDomisiliController;
 use App\Http\Controllers\Backend\Pelayanan\PerubahanKTPController as PelayananPerubahanKTPController;
 use App\Http\Controllers\Backend\Pengaduan\BEKontakController;
 use App\Http\Controllers\Backend\Pengaduan\BEPengaduanController;
+use App\Http\Controllers\Backend\Perangkat\BEKadesController;
+use App\Http\Controllers\Backend\Perangkat\BEPerangkatController;
 use App\Http\Controllers\Backend\Potensi\BEPotensiController;
 use App\Http\Controllers\Backend\ProfilController;
 use App\Http\Controllers\Frontend\BerandaController;
@@ -70,6 +72,10 @@ Route::middleware([
 
     // kontak
     Route::resource('admin/admin_kontak', BEKontakController::class);
+
+    // perangkat
+    Route::resource('admin/admin_kades', BEKadesController::class);
+    Route::resource('admin/admin_perangkat', BEPerangkatController::class);
 
     // pembuatan ktp
     Route::resource('admin/admin_pembuatan-ktp', BPembuatanKTPController::class);

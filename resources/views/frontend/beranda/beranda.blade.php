@@ -57,4 +57,48 @@
 </section>
 @endforeach
 <br><br>
+
+<section class="ftco-section bg-light" id="blog-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12 heading-section text-center ftco-animate mb-5">
+                <h2 class="mb-4">Perangkat Desa</h2>
+                <p>Susunan kepengurusan Desa Dermasuci  </p>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            @foreach ($kades as $item)
+            <div class="col-md-3 text-center ftco-animate">
+                <div class="team-member">
+                    <div class="team-img">
+                        <img src="{{ asset('images/'. $item->photo) }}" class="img-fluid" alt="Perangkat Desa">
+                    </div>
+                    <h5 class="mb-1">{{ $item->nama }}</h5>
+                    <p>{{ $item->jabatan }}</p>
+                </div>
+            </div>
+            @endforeach
+        </div>
+        <div class="row d-flex">
+
+
+            @foreach ($perangkat as $item)
+            <div class="col-md-3 text-center ftco-animate">
+                <div class="team-member">
+                    <div class="team-img">
+                        <img src="{{ asset('images/'. $item -> photo) }}" class="img-fluid" alt="Perangkat Desa">
+                    </div>
+                    <h5 class="mb-1">{{$item -> nama}}</h5>
+                    <p>{{$item -> jabatan}}</p>
+                </div>
+            </div>
+
+            @endforeach
+
+        </div>
+    </div>
+</section>
+
+<br><br>
 @endsection

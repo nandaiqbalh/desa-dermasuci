@@ -19,6 +19,29 @@
                 Profil Desa
             </div>
 
+            <li class="nav-item">
+                <a class="nav-link" href="{{route('profil.index')}}">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Profil Desa</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#perangkatPages"
+                    aria-expanded="true" aria-controls="perangkatPages">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Perangkat Desa</span>
+                </a>
+                <div id="perangkatPages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Perangkat Desa</h6>
+                        <a class="collapse-item" href="{{route('admin_kades.index')}}">Kepala Desa</a>
+                        <a class="collapse-item" href="{{route('admin_perangkat.index')}}">Perangkat Desa</a>
+
+                    </div>
+                </div>
+            </li>
+             <!-- Nav Item - Pages Collapse Menu -->
+
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link" href="{{route('highlights.index')}}">
@@ -26,11 +49,7 @@
                     <span>Sorotan</span></a>
             </li>
 
-            <li class="nav-item">
-                <a class="nav-link" href="{{route('profil.index')}}">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Profil Desa</span></a>
-            </li>
+
 
             <li class="nav-item">
                 <a class="nav-link" href="{{route('admin_potensi.index')}}">
