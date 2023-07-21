@@ -1,4 +1,4 @@
-<x-guest-layout>
+{{-- <x-guest-layout>
     <x-authentication-card>
         <x-slot name="logo">
             <x-authentication-card-logo />
@@ -57,4 +57,26 @@
             </div>
         </form>
     </x-authentication-card>
-</x-guest-layout>
+</x-guest-layout> --}}
+
+@extends('frontend.frontend_master')
+
+@section('main_frontend')
+<section class="ftco-section ftco-no-pb ftco-no-pt">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 text-center">
+                <div class="img mb-4 mt-5">
+                </div>
+                <div class="heading-section ftco-animate">
+                    <br><br><br><br><br><br>
+                    <h2 class="mb-4">404: Cannot Register</h2>
+                    <p>Please contact the admin for assistance.</p>
+                    <br><br><br><br><br><br>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+@endsection
