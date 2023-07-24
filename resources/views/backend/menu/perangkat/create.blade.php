@@ -18,6 +18,10 @@
                     <input type="text" class="form-control" id="jabatan" name="jabatan" required>
                 </div>
                 <div class="form-group">
+                    <label for="kontak">Kontak</label>
+                    <input type="text" class="form-control" id="kontak" name="kontak" required>
+                </div>
+                <div class="form-group">
                     <label for="photo">Foto</label>
                     <input type="file" class="form-control-file" id="photo" name="photo" required>
                 </div>

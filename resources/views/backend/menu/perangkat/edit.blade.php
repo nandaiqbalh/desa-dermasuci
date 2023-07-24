@@ -16,7 +16,11 @@
                 </div>
                 <div class="form-group">
                     <label for="jabatan">Jabatan</label>
-                    <textarea class="form-control" id="jabatan" name="jabatan" rows="5" required>{{ $perangkat->jabatan }}</textarea>
+                    <input type="text" class="form-control" id="jabatan" name="jabatan" value="{{ $perangkat->jabatan }}" required>
+                </div>
+                <div class="form-group">
+                    <label for="kontak">Kontak</label>
+                    <input type="text" class="form-control" id="kontak" name="kontak" value="{{ $perangkat->kontak }}" required>
                 </div>
                 <div class="form-group">
                     <label for="photo">Photo</label>

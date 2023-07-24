@@ -76,7 +76,7 @@
                     <div class="icon shadow d-flex align-items-center justify-content-center"><span class="flaticon-app-development"></span></div>
                     <div class="media-body">
                         <h3 class="heading mb-3">Permohonan SKTM</h3>
-                        <p>Buat Surat Keterangan Tidak Mampu.</p>
+                        <p>Buat Surat Keterangan Tidak Mampu untuk Kebutuhanmu.</p>
                     </div>
                 </a>
             </div>

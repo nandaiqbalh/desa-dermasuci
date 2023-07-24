@@ -16,7 +16,7 @@ class BEPerangkatController extends Controller
      */
     public function index()
     {
-        $perangkat = Perangkat::latest()->get();
+        $perangkat = Perangkat::latest()->get()->reverse();
         return view('backend.menu.perangkat.index', compact('perangkat'));
     }
 
@@ -41,6 +41,7 @@ class BEPerangkatController extends Controller
         $request->validate([
             'nama' => 'required',
             'jabatan' => 'required',
+            'kontak' => 'nullable',
             'photo' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 
@@ -50,6 +51,7 @@ class BEPerangkatController extends Controller
         Perangkat::create([
             'nama' => $request->nama,
             'jabatan' => $request->jabatan,
+            'kontak' => $request->kontak,
             'photo' => $imageName,
         ]);
 
@@ -81,6 +83,7 @@ class BEPerangkatController extends Controller
         $request->validate([
             'nama' => 'required',
             'jabatan' => 'required',
+            'kontak' => 'nullable',
             'photo' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 
@@ -92,6 +95,7 @@ class BEPerangkatController extends Controller
 
         $perangkat->nama = $request->nama;
         $perangkat->jabatan = $request->jabatan;
+        $perangkat->kontak = $request->kontak;
 
         if ($request->hasFile('photo')) {
             $request->validate([

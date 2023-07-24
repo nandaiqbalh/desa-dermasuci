@@ -91,6 +91,7 @@
                     </div>
                     <h5 class="mb-1">{{$item -> nama}}</h5>
                     <p>{{$item -> jabatan}}</p>
+                    <p style="color: #008000">Kontak: {{ $item->kontak }}</p>
                 </div>
             </div>
 

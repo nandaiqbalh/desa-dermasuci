@@ -20,6 +20,7 @@
                             <th>No.</th>
                             <th>Nama</th>
                             <th>Jabatan</th>
+                            <th>Kontak</th>
                             <th>Foto</th>
                             <th>Actions</th>
                         </tr>
@@ -30,6 +31,8 @@
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $item->nama }}</td>
                                 <td>{{ $item->jabatan }}</td>
+                                <td>{{ $item->kontak }}</td>
+
                                 <td>
                                     <img src="{{ asset('images/' . $item->photo) }}" alt="Image" width="100">
                                 </td>
