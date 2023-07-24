@@ -86,7 +86,7 @@
             </td>
         </tr>
     </table>
-    <p class="content address-line" style="text-align: center; font-size: 12px">Jalan Dukuh Duren No.21 Rt.01 Rw.02 Dermasuci –
+    <p class="content address-line" style="text-align: center; font-size: 12px">Jalan Dukuh Duren No.21 Rt.06 Rw.04 Dermasuci –
         Pangkah
         KodePos
         52471</p>
@@ -100,12 +100,16 @@
 
     <table class="content">
         <tr>
-            <td class="content-label">Desa</td>
-            <td class="content-value">: Dermasuci</td>
+            <td class="content-label">Nama</td>
+            <td class="content-value">: Mulyanto</td>
         </tr>
         <tr>
-            <td class="content-label">Alamat</td>
-            <td class="content-value">: Desa Dermasuci Rt.01 Rw.01 Kec. Pangkah Kabupaten Tegal</td>
+            <td class="content-label">NIK</td>
+            <td class="content-value">: 3328090907760006 </td>
+        </tr>
+        <tr>
+            <td class="content-label">Alamat Kantor Kepala Desa</td>
+            <td class="content-value">: Desa Dermasuci Rt.06 Rw.04 Kec. Pangkah Kabupaten Tegal</td>
         </tr>
 
     </table>
