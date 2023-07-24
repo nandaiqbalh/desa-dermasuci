@@ -25,6 +25,10 @@
                     <label for="thumbnail">Thumbnail</label>
                     <input type="file" class="form-control-file" id="thumbnail" name="thumbnail" required>
                 </div>
+                <div class="form-group">
+                    <label for="galeri">Gallery Photos:</label>
+                    <input type="file" name="galeri[]" id="galeri" class="form-control-file" multiple>
+                </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
         </div>

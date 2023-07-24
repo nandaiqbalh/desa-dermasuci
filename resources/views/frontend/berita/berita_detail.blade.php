@@ -12,6 +12,14 @@
             </p>
             <p>{!! nl2br($berita->isi_berita) !!}</p>
 
+            @if (!empty($berita->galeri))
+            <div class="gallery">
+                @foreach (json_decode($berita->galeri) as $photo)
+                    <img src="{{ asset('storage/' . $photo) }}" alt="Gallery Photo" width="200">
+                @endforeach
+            </div>
+        @endif
+
         </div> <!-- .col-md-8 -->
         <div class="col-lg-4 sidebar ftco-animate">
           <div class="sidebar-box ftco-animate">

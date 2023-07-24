@@ -27,6 +27,10 @@
                     <input type="file" class="form-control-file" id="thumbnail" name="thumbnail">
                 </div>
                 <div class="form-group">
+                    <label for="galeri">Change Gallery Photos:</label>
+                    <input type="file" name="galeri[]" id="galeri" class="form-control-file" multiple>
+                </div>
+                <div class="form-group">
                     <label for="current_thumbnail">Current Thumbnail</label>
                     <div class="mb-2">
                         <img src="{{ asset('images/' . $berita->thumbnail) }}" alt="Current Thumbnail" class="img-fluid" style="max-width: 300px;">

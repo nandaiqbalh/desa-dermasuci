@@ -36,18 +36,32 @@ class BeritaController extends Controller
             'subjudul_berita' => 'required',
             'isi_berita' => 'required',
             'thumbnail' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'galeri.*' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
+
         ]);
+
 
         $imageName = time() . '.' . $request->thumbnail->extension();
         $request->thumbnail->move(public_path('images'), $imageName);
 
         $user = auth()->user(); // Mengambil pengguna yang sedang login
 
+        $galeri = [];
+
+        if ($request->hasFile('galeri')) {
+            foreach ($request->file('galeri') as $photo) {
+                $path = $photo->store('gallery', 'public');
+                $galeri[] = $path;
+            }
+        }
+
         $berita = new Berita([
             'judul_berita' => $request->judul_berita,
             'subjudul_berita' => $request->subjudul_berita,
             'isi_berita' => $request->isi_berita,
             'thumbnail' => $imageName,
+            'galeri' => json_encode($galeri),
+
         ]);
 
         $berita->penulis = $user->name; // Mengisi kolom "penulis" dengan nama pengguna yang sedang login
@@ -84,13 +98,25 @@ class BeritaController extends Controller
             'subjudul_berita' => 'required',
             'isi_berita' => 'required',
             'thumbnail' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
+            'galeri.*' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
+
         ]);
 
         $berita = Berita::findOrFail($id);
 
+        $galeri = [];
+
+        if ($request->hasFile('galeri')) {
+            foreach ($request->file('galeri') as $photo) {
+                $path = $photo->store('gallery', 'public');
+                $galeri[] = $path;
+            }
+        }
+
         $berita->judul_berita = $request->judul_berita;
         $berita->subjudul_berita = $request->subjudul_berita;
         $berita->isi_berita = $request->isi_berita;
+        $berita->galeri = json_encode($galeri);
 
         if ($request->hasFile('thumbnail')) {
             $request->validate([
@@ -125,6 +151,12 @@ class BeritaController extends Controller
             Storage::disk('public')->delete('images/' . $berita->thumbnail);
         }
 
+        $galeri = json_decode($berita->galeri);
+        if (!empty($galeri)) {
+            foreach ($galeri as $photo) {
+                Storage::disk('public')->delete($photo);
+            }
+        }
         $berita->delete();
 
         return redirect()->route('admin_berita.index')->with('success', 'Berita berhasil dihapus!');
