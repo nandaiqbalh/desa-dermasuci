@@ -23,7 +23,7 @@ class BEPindahDomisiliController extends Controller
             return redirect()->route('admin_pindah-domisili.index')->with('error', 'Data not found');
         }
 
-        $pdf = PDF::loadView('\backend\menu\pelayanan\pindah_domisili\surat_pindah_domisili', compact('data'));
+        $pdf = PDF::loadView('backend.menu.pelayanan.pindah_domisili.surat_pindah_domisili', compact('data'));
 
         $filename = $data->nama . '_' . $data->nik . '_surat_pindah_domisili.pdf';
 

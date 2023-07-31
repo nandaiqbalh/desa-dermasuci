@@ -26,7 +26,7 @@
                                 <a href="#" class="mr-2">{{ $berita->penulis }}</a>
                             </p>
                         </div>
-                        <h3 class="heading"><a href="single.html">{{ $berita->judul_berita }}</a></h3>
+                        <h3 class="heading"><a href="{{ route('berita.show', $berita->id) }}">{{ $berita->judul_berita }}</a></h3>
                         <p>{{ $berita->subjudul_berita }}</p>
                     </div>
                 </div>

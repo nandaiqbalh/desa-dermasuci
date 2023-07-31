@@ -27,7 +27,7 @@ class BPembuatanKTPController extends Controller
             return redirect()->route('admin_pembuatan-ktp.index')->with('error', 'Data not found');
         }
 
-        $pdf = PDF::loadView('\backend\menu\pelayanan\pembuatan_ktp\surat_pengantar_pembuatan_ktp', compact('data'));
+        $pdf = PDF::loadView('backend.menu.pelayanan.pembuatan_ktp.surat_pengantar_pembuatan_ktp', compact('data'));
 
         $filename = $data->nama . '_' . $data->nik . '_pengantar-ktp.pdf';
 

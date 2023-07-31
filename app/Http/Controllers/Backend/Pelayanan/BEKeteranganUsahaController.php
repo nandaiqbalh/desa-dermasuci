@@ -23,7 +23,7 @@ class BEKeteranganUsahaController extends Controller
             return redirect()->route('admin_keterangan-usaha.index')->with('error', 'Data not found');
         }
 
-        $pdf = PDF::loadView('\backend\menu\pelayanan\keterangan_usaha\surat_keterangan_usaha', compact('data'));
+        $pdf = PDF::loadView('backend.menu.pelayanan.keterangan_usaha.surat_keterangan_usaha', compact('data'));
 
         $filename = $data->nama . '_' . $data->nik . '_surat keterangan usaha.pdf';
 

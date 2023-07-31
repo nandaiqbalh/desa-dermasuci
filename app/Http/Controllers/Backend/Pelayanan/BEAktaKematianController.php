@@ -23,7 +23,7 @@ class BEAktaKematianController extends Controller
             return redirect()->route('admin_akta-kematian.index')->with('error', 'Data not found');
         }
 
-        $pdf = PDF::loadView('backend\menu\pelayanan\akta-kematian\surat_pengantar_akta_kematian', compact('data'));
+        $pdf = PDF::loadView('backend.menu.pelayanan.akta-kematian.surat_pengantar_akta_kematian', compact('data'));
 
         $filename = $data->nama . '_' . $data->nik . '_surat pengantar akta kematian.pdf';
 

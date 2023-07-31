@@ -23,7 +23,7 @@ class BEPermohonanSKTMController extends Controller
             return redirect()->route('admin_permohonan-sktm.index')->with('error', 'Data not found');
         }
 
-        $pdf = PDF::loadView('\backend\menu\pelayanan\permohonan_sktm\surat_permohonan_sktm', compact('data'));
+        $pdf = PDF::loadView('backend.menu.pelayanan.permohonan_sktm.surat_permohonan_sktm', compact('data'));
 
         $filename = $data->nama . '_' . $data->nik . '_permohonan_sktm.pdf';
 

@@ -23,7 +23,7 @@ class BEPermohonanSKCKController extends Controller
             return redirect()->route('admin_permohonan-skck.index')->with('error', 'Data not found');
         }
 
-        $pdf = PDF::loadView('\backend\menu\pelayanan\permohonan_skck\surat_pengantar_permohonan_skck', compact('data'));
+        $pdf = PDF::loadView('backend.menu.pelayanan.permohonan_skck.surat_pengantar_permohonan_skck', compact('data'));
 
         $filename = $data->nama . '_' . $data->nik . '_pengantar_permohonan_skck.pdf';
 

@@ -23,7 +23,7 @@ class PerubahanKTPController extends Controller
             return redirect()->route('admin_perubahan-ktp.index')->with('error', 'Data not found');
         }
 
-        $pdf = PDF::loadView('\backend\menu\pelayanan\perubahan_ktp\surat_pengantar_perubahan_ktp', compact('data'));
+        $pdf = PDF::loadView('backend.menu.pelayanan.perubahan_ktp.surat_pengantar_perubahan_ktp', compact('data'));
 
         $filename = $data->nama . '_' . $data->nik . '_pengantar-ktp.pdf';
 

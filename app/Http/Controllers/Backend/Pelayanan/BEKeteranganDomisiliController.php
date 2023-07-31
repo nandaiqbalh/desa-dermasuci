@@ -23,7 +23,7 @@ class BEKeteranganDomisiliController extends Controller
             return redirect()->route('admin_keterangan-domisili.index')->with('error', 'Data not found');
         }
 
-        $pdf = PDF::loadView('\backend\menu\pelayanan\keterangan_domisili\surat_keterangan_domisili', compact('data'));
+        $pdf = PDF::loadView('backend.menu.pelayanan.keterangan_domisili.surat_keterangan_domisili', compact('data'));
 
         $filename = $data->nama . '_' . $data->nik . '_surat keterangan domisili.pdf';
 

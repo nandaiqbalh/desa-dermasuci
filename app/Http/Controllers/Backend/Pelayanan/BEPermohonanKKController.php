@@ -23,7 +23,7 @@ class BEPermohonanKKController extends Controller
             return redirect()->route('admin_permohonan-kk.index')->with('error', 'Data not found');
         }
 
-        $pdf = PDF::loadView('\backend\menu\pelayanan\permohonan_kk\surat_pengantar_permohonan_kk', compact('data'));
+        $pdf = PDF::loadView('backend.menu.pelayanan.permohonan_kk.surat_pengantar_permohonan_kk', compact('data'));
 
         $filename = $data->nama . '_' . $data->nik . '_permohonan-kk.pdf';
 

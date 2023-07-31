@@ -23,7 +23,7 @@ class BEAktaKelahiranController extends Controller
             return redirect()->route('admin_akta-kelahiran.index')->with('error', 'Data not found');
         }
 
-        $pdf = PDF::loadView('backend\menu\pelayanan\akta-kelahiran\surat_pengantar_akta_kelahiran', compact('data'));
+        $pdf = PDF::loadView('backend.menu.pelayanan.akta-kelahiran.surat_pengantar_akta_kelahiran', compact('data'));
 
         $filename = $data->nama . '_' . $data->nik . '_surat pengantar akta kelahiran.pdf';
 
